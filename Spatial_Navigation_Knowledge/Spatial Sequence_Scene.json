@@ -1,0 +1,2788 @@
+{
+    "35": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Door",
+                "point_2d": [
+                    90,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.46,
+                    "Y_meters": -0.07,
+                    "Z_meters": 5.32
+                },
+                "reason": "The student is standing in the hallway facing the door on the left side of the image.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Window",
+                "point_2d": [
+                    450,
+                    48
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.21,
+                    "Y_meters": -2.04,
+                    "Z_meters": 19.79
+                },
+                "reason": "The window is visible on the right side of the image, but the student is not facing it.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Notice board inside glass",
+                "point_2d": [
+                    90,
+                    312
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.38,
+                    "Y_meters": 0.02,
+                    "Z_meters": 4.4
+                },
+                "reason": "The notice board is visible through the glass of the door, but the student is not facing it.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Locker",
+                "point_2d": [
+                    270,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.16,
+                    "Y_meters": -0.49,
+                    "Z_meters": 13.23
+                },
+                "reason": "The lockers are visible along the hallway, but the student is not facing them.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "36": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "pillar_1",
+                "point_2d": [
+                    90,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.55,
+                    "Y_meters": -0.08,
+                    "Z_meters": 5.1
+                },
+                "reason": "The first pillar on the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "pillar_2",
+                "point_2d": [
+                    240,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.32,
+                    "Y_meters": 0.16,
+                    "Z_meters": 10.55
+                },
+                "reason": "The second pillar from the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "pillar_3",
+                "point_2d": [
+                    330,
+                    348
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.21,
+                    "Y_meters": 0.34,
+                    "Z_meters": 13.95
+                },
+                "reason": "The third pillar from the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "person_with_backpack",
+                "point_2d": [
+                    372,
+                    432
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.53,
+                    "Y_meters": 0.97,
+                    "Z_meters": 14.28
+                },
+                "reason": "The person standing at the end with a backpack and white shirt.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "105": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "bus stop",
+                "point_2d": [
+                    270,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.23,
+                    "Y_meters": 0.23,
+                    "Z_meters": 5.87
+                },
+                "reason": "The bus stop is the central object in the image, and the question is about crossing the road near it.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "red car",
+                "point_2d": [
+                    270,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.31,
+                    "Y_meters": -0.31,
+                    "Z_meters": 8.1
+                },
+                "reason": "The red car is visible in the background, indicating the direction of traffic and the need to cross the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "white car",
+                "point_2d": [
+                    288,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": -0.27,
+                    "Z_meters": 7.02
+                },
+                "reason": "The white car is visible in the background, indicating the direction of traffic and the need to cross the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "bus",
+                "point_2d": [
+                    210,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.24,
+                    "Y_meters": -0.24,
+                    "Z_meters": 2.09
+                },
+                "reason": "The bus is visible in the background, indicating the direction of traffic and the need to cross the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "walkway",
+                "point_2d": [
+                    480,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.81,
+                    "Y_meters": 0.4,
+                    "Z_meters": 3.46
+                },
+                "reason": "The walkway is implied as a safe crossing point, as it is a common feature near bus stops.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "140": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "woman in jacket with pink scarf",
+                "point_2d": [
+                    384,
+                    222
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.43,
+                    "Y_meters": -0.4,
+                    "Z_meters": 6.4
+                },
+                "reason": "The woman is standing near a corner, which is a potential turning point.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "hallway",
+                "point_2d": [
+                    240,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.63,
+                    "Y_meters": 0.0,
+                    "Z_meters": 13.16
+                },
+                "reason": "The hallway is the main path where movement occurs.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "blue lockers",
+                "point_2d": [
+                    480,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.74,
+                    "Y_meters": -0.25,
+                    "Z_meters": 5.13
+                },
+                "reason": "The lockers are along the hallway, indicating a typical school environment.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "176": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "cobblestone road",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.19,
+                    "Y_meters": 0.94,
+                    "Z_meters": 4.53
+                },
+                "reason": "The road is narrow and lined with buildings, which could pose obstacles for a truck.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "buildings",
+                "point_2d": [
+                    150,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.66,
+                    "Y_meters": -0.13,
+                    "Z_meters": 3.19
+                },
+                "reason": "The buildings are close to the road, potentially limiting space for a truck to navigate.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "benches",
+                "point_2d": [
+                    90,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.77,
+                    "Y_meters": 0.55,
+                    "Z_meters": 2.65
+                },
+                "reason": "Benches are placed along the road, which could be obstacles for a truck.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "pedestrians",
+                "point_2d": [
+                    390,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.02,
+                    "Y_meters": 1.02,
+                    "Z_meters": 8.22
+                },
+                "reason": "Pedestrians are present, which could pose a risk for a truck.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "castle-like structure",
+                "point_2d": [
+                    240,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.82,
+                    "Y_meters": -2.04,
+                    "Z_meters": 9.85
+                },
+                "reason": "The structure at the end of the road could be an obstacle for a truck.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "191": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "right side path",
+                "point_2d": [
+                    480,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.13,
+                    "Y_meters": 0.19,
+                    "Z_meters": 4.94
+                },
+                "reason": "The path is visible on the right side of the canal, leading towards the bridge.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "bridge",
+                "point_2d": [
+                    240,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.68,
+                    "Y_meters": -1.36,
+                    "Z_meters": 8.88
+                },
+                "reason": "The bridge is the main structure in the image, and the path leads towards it.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "bushes",
+                "point_2d": [
+                    360,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.61,
+                    "Y_meters": -0.61,
+                    "Z_meters": 7.95
+                },
+                "reason": "Bushes are visible near the bridge, marking the end of the path.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "234": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "hallway",
+                "point_2d": [
+                    300,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.0,
+                    "Z_meters": 4.68
+                },
+                "reason": "The hallway is the main subject of the image, and it is clear and unobstructed towards the end.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "students",
+                "point_2d": [
+                    420,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.89,
+                    "Y_meters": -0.45,
+                    "Z_meters": 7.59
+                },
+                "reason": "Students are present but are not blocking the path towards the end of the hallway.",
+                "facing_direction": "facing away from camera"
+            },
+            {
+                "name": "lockers",
+                "point_2d": [
+                    60,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.77,
+                    "Y_meters": -0.19,
+                    "Z_meters": 3.27
+                },
+                "reason": "Lockers are on the left side of the hallway but do not obstruct the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "floor",
+                "point_2d": [
+                    360,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.39,
+                    "Y_meters": 0.78,
+                    "Z_meters": 6.6
+                },
+                "reason": "The floor is clear and visible, indicating an unobstructed path.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "258": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "road",
+                "point_2d": [
+                    150,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.44,
+                    "Y_meters": 0.29,
+                    "Z_meters": 11.52
+                },
+                "reason": "The road is the main path leading to the end of the image.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "last tree",
+                "point_2d": [
+                    210,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.66,
+                    "Y_meters": -0.22,
+                    "Z_meters": 8.73
+                },
+                "reason": "The last tree is the one closest to the end of the road.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "right side of the road",
+                "point_2d": [
+                    360,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.15,
+                    "Y_meters": 0.0,
+                    "Z_meters": 2.91
+                },
+                "reason": "The right side of the road is where the last tree is located.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "301": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "human in black dress",
+                "point_2d": [
+                    312,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.09,
+                    "Y_meters": 0.69,
+                    "Z_meters": 4.1
+                },
+                "reason": "The human in black dress is the main subject of the image and is standing on the stairs.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "stairs",
+                "point_2d": [
+                    300,
+                    510
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 1.53,
+                    "Z_meters": 3.92
+                },
+                "reason": "The stairs are the structure the human is standing on, and they are clearly visible in the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "yellow-painted step",
+                "point_2d": [
+                    288,
+                    552
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.07,
+                    "Y_meters": 1.46,
+                    "Z_meters": 3.11
+                },
+                "reason": "The yellow-painted step is the first step the human is standing on, indicating the starting point.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "wooden handrail",
+                "point_2d": [
+                    180,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.97,
+                    "Y_meters": 1.22,
+                    "Z_meters": 4.36
+                },
+                "reason": "The wooden handrail is part of the staircase structure and helps to identify the stairs.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "311": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "woman in white shirt",
+                "point_2d": [
+                    138,
+                    498
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.63,
+                    "Y_meters": 0.77,
+                    "Z_meters": 5.59
+                },
+                "reason": "The woman in white shirt is the starting point for counting pillars.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "red color dressed woman",
+                "point_2d": [
+                    294,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.05,
+                    "Y_meters": -0.39,
+                    "Z_meters": 11.67
+                },
+                "reason": "The red color dressed woman is the destination for counting pillars.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "pillar 1",
+                "point_2d": [
+                    210,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.35,
+                    "Y_meters": 0.35,
+                    "Z_meters": 5.54
+                },
+                "reason": "The first pillar encountered when moving from the woman in white shirt towards the red color dressed woman.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "pillar 2",
+                "point_2d": [
+                    312,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.07,
+                    "Y_meters": 0.17,
+                    "Z_meters": 8.03
+                },
+                "reason": "The second pillar encountered when moving from the woman in white shirt towards the red color dressed woman.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "pillar 3",
+                "point_2d": [
+                    366,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.54,
+                    "Y_meters": -0.1,
+                    "Z_meters": 11.84
+                },
+                "reason": "The third pillar encountered when moving from the woman in white shirt towards the red color dressed woman.",
+                "facing_direction": "facing right"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "314": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "human sitting in the bench (reading paper)",
+                "point_2d": [
+                    72,
+                    282
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.81,
+                    "Y_meters": -0.14,
+                    "Z_meters": 12.05
+                },
+                "reason": "The person is sitting on a bench and reading a paper, positioned on the platform.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "red colored door",
+                "point_2d": [
+                    366,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.63,
+                    "Y_meters": -0.11,
+                    "Z_meters": 14.48
+                },
+                "reason": "The red door is the closest accessible door to the person sitting on the bench.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "train",
+                "point_2d": [
+                    450,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.9,
+                    "Y_meters": -0.36,
+                    "Z_meters": 9.06
+                },
+                "reason": "The train is stationary at the platform, with doors open for boarding.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "platform",
+                "point_2d": [
+                    210,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.08,
+                    "Y_meters": 0.36,
+                    "Z_meters": 18.16
+                },
+                "reason": "The platform is the area where the person is sitting and where the train is located.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "396": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "blue lockers",
+                "point_2d": [
+                    90,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.43,
+                    "Y_meters": 0.0,
+                    "Z_meters": 4.74
+                },
+                "reason": "Starting point for the path.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "fire alarm",
+                "point_2d": [
+                    192,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.7,
+                    "Y_meters": -1.35,
+                    "Z_meters": 4.47
+                },
+                "reason": "Indicates the general area of the hallway.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "fire extinguisher",
+                "point_2d": [
+                    186,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.73,
+                    "Y_meters": -0.39,
+                    "Z_meters": 4.46
+                },
+                "reason": "Indicates the general area of the hallway.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "door with glass panel",
+                "point_2d": [
+                    420,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.83,
+                    "Y_meters": -0.21,
+                    "Z_meters": 4.77
+                },
+                "reason": "The door leading to the classroom.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "classroom",
+                "point_2d": [
+                    450,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.0,
+                    "Y_meters": 0.4,
+                    "Z_meters": 4.64
+                },
+                "reason": "The destination of the path.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "401": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "black Toyota SUV",
+                "point_2d": [
+                    210,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.57,
+                    "Y_meters": 0.57,
+                    "Z_meters": 5.36
+                },
+                "reason": "The black Toyota SUV is in the foreground and needs to be passed to reach the house.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "black Lexus SUV",
+                "point_2d": [
+                    348,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.59,
+                    "Y_meters": 0.74,
+                    "Z_meters": 10.42
+                },
+                "reason": "The black Lexus SUV is parked next to the Toyota and also needs to be passed to reach the house.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "silver car",
+                "point_2d": [
+                    90,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.46,
+                    "Y_meters": 1.05,
+                    "Z_meters": 9.87
+                },
+                "reason": "The silver car is parked on the left side and needs to be passed to reach the house.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "442": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Water pool",
+                "point_2d": [
+                    240,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.21,
+                    "Y_meters": 0.42,
+                    "Z_meters": 2.34
+                },
+                "reason": "The water pool is the closest object in the foreground that one would need to pass to reach the large structure (St. Paul's Cathedral) in the background.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Trees",
+                "point_2d": [
+                    360,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.71,
+                    "Y_meters": -0.71,
+                    "Z_meters": 7.85
+                },
+                "reason": "The trees are between the water pool and the large structure, but they are not the closest object to pass to reach the structure.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "448": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Osmond",
+                "point_2d": [
+                    84,
+                    186
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.13,
+                    "Y_meters": -1.13,
+                    "Z_meters": 8.44
+                },
+                "reason": "The store name 'Osmond' is visible on the left side of the image.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Tr",
+                "point_2d": [
+                    480,
+                    132
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.26,
+                    "Y_meters": -1.18,
+                    "Z_meters": 5.98
+                },
+                "reason": "The store name 'Tr' is visible on the right side of the image.",
+                "facing_direction": "facing camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "498": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Gate",
+                "point_2d": [
+                    402,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.48,
+                    "Y_meters": 0.03,
+                    "Z_meters": 7.34
+                },
+                "reason": "The gate is positioned at the top of the stairs, obstructing the way down.",
+                "facing_direction": "facing down"
+            },
+            {
+                "name": "People",
+                "point_2d": [
+                    408,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.52,
+                    "Y_meters": -0.06,
+                    "Z_meters": 7.5
+                },
+                "reason": "People are sitting on the stairs, which obstructs the way down.",
+                "facing_direction": "facing down"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "503": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "path",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.32,
+                    "Y_meters": 1.58,
+                    "Z_meters": 13.66
+                },
+                "reason": "The path is visible in the image and appears to be sloping downwards.",
+                "facing_direction": "downwards"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "532": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Door",
+                "point_2d": [
+                    390,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.07,
+                    "Y_meters": -1.79,
+                    "Z_meters": 27.55
+                },
+                "reason": "The door is at the end of the hallway, which is the end of the road in the image.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Children",
+                "point_2d": [
+                    150,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.39,
+                    "Y_meters": -0.31,
+                    "Z_meters": 5.94
+                },
+                "reason": "The children are in the hallway, but they are not at the end of the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Bags",
+                "point_2d": [
+                    252,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.26,
+                    "Y_meters": -0.16,
+                    "Z_meters": 12.5
+                },
+                "reason": "The bags are hanging on the wall, but they are not at the end of the road.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Drawers",
+                "point_2d": [
+                    510,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.18,
+                    "Y_meters": -0.5,
+                    "Z_meters": 12.93
+                },
+                "reason": "The drawers are on the right side of the hallway, but they are not at the end of the road.",
+                "facing_direction": "facing camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "534": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stairs",
+                "point_2d": [
+                    270,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.34,
+                    "Y_meters": 1.02,
+                    "Z_meters": 30.1
+                },
+                "reason": "The stairs are visible in the center of the image, leading upwards.",
+                "facing_direction": "up"
+            },
+            {
+                "name": "road",
+                "point_2d": [
+                    240,
+                    510
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.49,
+                    "Y_meters": 1.7,
+                    "Z_meters": 21.5
+                },
+                "reason": "The road is the main path in the foreground of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "left path",
+                "point_2d": [
+                    90,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.58,
+                    "Y_meters": 0.9,
+                    "Z_meters": 19.94
+                },
+                "reason": "The left side of the road has a path leading further into the scene.",
+                "facing_direction": "left"
+            },
+            {
+                "name": "right path",
+                "point_2d": [
+                    390,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.56,
+                    "Y_meters": 0.74,
+                    "Z_meters": 16.46
+                },
+                "reason": "The right side of the road has a path leading further into the scene.",
+                "facing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "559": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "human",
+                "point_2d": [
+                    312,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.08,
+                    "Y_meters": 0.21,
+                    "Z_meters": 8.1
+                },
+                "reason": "The person is walking on the road and is visible in the image.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "human",
+                "point_2d": [
+                    366,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.42,
+                    "Y_meters": 0.12,
+                    "Z_meters": 7.57
+                },
+                "reason": "The person is walking on the road and is visible in the image.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "human",
+                "point_2d": [
+                    384,
+                    342
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.53,
+                    "Y_meters": 0.27,
+                    "Z_meters": 7.49
+                },
+                "reason": "The person is walking on the road and is visible in the image.",
+                "facing_direction": "away from camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "573": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "person walking towards camera",
+                "point_2d": [
+                    132,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.81,
+                    "Y_meters": -0.2,
+                    "Z_meters": 15.02
+                },
+                "reason": "The person is walking towards the camera and is in the foreground.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "person walking towards camera",
+                "point_2d": [
+                    246,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.41,
+                    "Y_meters": -0.09,
+                    "Z_meters": 6.81
+                },
+                "reason": "The person is walking towards the camera and is in the foreground.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "person walking towards camera",
+                "point_2d": [
+                    348,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.35,
+                    "Y_meters": -0.09,
+                    "Z_meters": 6.61
+                },
+                "reason": "The person is walking towards the camera and is in the foreground.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "person walking away from camera",
+                "point_2d": [
+                    84,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.81,
+                    "Y_meters": 0.08,
+                    "Z_meters": 11.68
+                },
+                "reason": "The person is walking away from the camera and is in the background.",
+                "facing_direction": "facing away"
+            },
+            {
+                "name": "person walking away from camera",
+                "point_2d": [
+                    126,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.25,
+                    "Y_meters": 0.04,
+                    "Z_meters": 6.46
+                },
+                "reason": "The person is walking away from the camera and is in the background.",
+                "facing_direction": "facing away"
+            },
+            {
+                "name": "person walking away from camera",
+                "point_2d": [
+                    252,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.36,
+                    "Y_meters": 0.13,
+                    "Z_meters": 6.72
+                },
+                "reason": "The person is walking away from the camera and is in the background.",
+                "facing_direction": "facing away"
+            },
+            {
+                "name": "person walking away from camera",
+                "point_2d": [
+                    312,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.13,
+                    "Y_meters": 0.19,
+                    "Z_meters": 9.56
+                },
+                "reason": "The person is walking away from the camera and is in the background.",
+                "facing_direction": "facing away"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "579": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "woman",
+                "point_2d": [
+                    96,
+                    348
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.54,
+                    "Y_meters": 0.13,
+                    "Z_meters": 2.1
+                },
+                "reason": "The woman is walking away from the camera, which means she is looking forward along the road.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "road",
+                "point_2d": [
+                    270,
+                    480
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.22,
+                    "Y_meters": 1.31,
+                    "Z_meters": 5.83
+                },
+                "reason": "The road extends into the distance, allowing the woman to see more of it from her viewpoint.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "umbrella",
+                "point_2d": [
+                    60,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.04,
+                    "Y_meters": -0.13,
+                    "Z_meters": 3.46
+                },
+                "reason": "The umbrella is held by the woman, indicating her presence and orientation.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "buildings",
+                "point_2d": [
+                    180,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.76,
+                    "Y_meters": -0.38,
+                    "Z_meters": 5.05
+                },
+                "reason": "The buildings line the road, framing the path and providing context for the woman's viewpoint.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "cherry blossoms",
+                "point_2d": [
+                    360,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.13,
+                    "Y_meters": -0.39,
+                    "Z_meters": 1.72
+                },
+                "reason": "The cherry blossoms are overhead, adding to the visual elements along the road.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "706": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Tree",
+                "point_2d": [
+                    390,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.76,
+                    "Y_meters": -0.25,
+                    "Z_meters": 5.65
+                },
+                "reason": "The tree is in the foreground and would be encountered first when moving toward the building.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Bench",
+                "point_2d": [
+                    468,
+                    486
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.02,
+                    "Y_meters": 2.23,
+                    "Z_meters": 8.02
+                },
+                "reason": "The bench is visible in the background but is not the first object encountered.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Landmark",
+                "point_2d": [
+                    270,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.09,
+                    "Y_meters": 0.09,
+                    "Z_meters": 2.08
+                },
+                "reason": "The landmark (statue) is in the foreground and would be encountered first when moving toward the building.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Human",
+                "point_2d": [
+                    270,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.1,
+                    "Y_meters": -0.3,
+                    "Z_meters": 2.2
+                },
+                "reason": "The human figure is part of the statue and would be encountered first when moving toward the building.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "712": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Yellow door",
+                "point_2d": [
+                    96,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.34,
+                    "Y_meters": -0.32,
+                    "Z_meters": 4.54
+                },
+                "reason": "The yellow door is on the left side of the hallway and is one of the objects that can be passed to reach the end of the hallway.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Picture frames",
+                "point_2d": [
+                    162,
+                    198
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.34,
+                    "Y_meters": -0.99,
+                    "Z_meters": 6.74
+                },
+                "reason": "The picture frames are on the left wall and are objects that can be passed to reach the end of the hallway.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "Blue colored doorway",
+                "point_2d": [
+                    258,
+                    192
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.33,
+                    "Y_meters": -3.41,
+                    "Z_meters": 21.82
+                },
+                "reason": "The blue colored doorway is at the end of the hallway and is the final object to pass to reach the end.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Humans",
+                "point_2d": [
+                    282,
+                    216
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.8,
+                    "Y_meters": -3.73,
+                    "Z_meters": 30.69
+                },
+                "reason": "Humans are not visible in the image, but they are not an object that needs to be passed to reach the end of the hallway.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "715": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stone",
+                "point_2d": [
+                    300,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.21,
+                    "Z_meters": 1.27
+                },
+                "reason": "The stones are the main objects in the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "grass",
+                "point_2d": [
+                    480,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.4,
+                    "Y_meters": -0.13,
+                    "Z_meters": 1.61
+                },
+                "reason": "The grass is present on both sides of the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "bush",
+                "point_2d": [
+                    60,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.48,
+                    "Y_meters": 0.0,
+                    "Z_meters": 1.46
+                },
+                "reason": "The bush is on the left side of the path.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "745": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "left door",
+                "point_2d": [
+                    90,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.17,
+                    "Y_meters": 0.0,
+                    "Z_meters": 8.98
+                },
+                "reason": "The left door is one of the options to exit the building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "right door",
+                "point_2d": [
+                    300,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.0,
+                    "Z_meters": 8.92
+                },
+                "reason": "The right door is another option to exit the building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "rightmost open space blocked by glass",
+                "point_2d": [
+                    480,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.05,
+                    "Y_meters": 0.0,
+                    "Z_meters": 9.9
+                },
+                "reason": "The rightmost open space blocked by glass is an option to exit the building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "any of the door",
+                "point_2d": [
+                    240,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.61,
+                    "Y_meters": 0.0,
+                    "Z_meters": 8.89
+                },
+                "reason": "Any of the doors can be used to exit the building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "exit sign",
+                "point_2d": [
+                    228,
+                    108
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.45,
+                    "Y_meters": -1.19,
+                    "Z_meters": 5.37
+                },
+                "reason": "The exit sign indicates the direction to the exit.",
+                "facing_direction": "facing camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "787": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Tree",
+                "point_2d": [
+                    210,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.25,
+                    "Y_meters": 0.08,
+                    "Z_meters": 4.17
+                },
+                "reason": "The tree is in the foreground and must be passed to reach the man.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Bench",
+                "point_2d": [
+                    384,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.52,
+                    "Y_meters": 0.04,
+                    "Z_meters": 9.24
+                },
+                "reason": "The bench is between the tree and the man, so it must be passed.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "797": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Human",
+                "point_2d": [
+                    276,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.48,
+                    "Y_meters": -0.97,
+                    "Z_meters": 7.91
+                },
+                "reason": "The human is standing at the end of the hallway, facing the doors.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "Blue door",
+                "point_2d": [
+                    252,
+                    264
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.99,
+                    "Y_meters": -0.74,
+                    "Z_meters": 8.08
+                },
+                "reason": "The blue door is at the end of the hallway, where the human is standing.",
+                "facing_direction": "facing human"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "802": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "bus stop",
+                "point_2d": [
+                    270,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.22,
+                    "Y_meters": -0.22,
+                    "Z_meters": 6.39
+                },
+                "reason": "The bus stop is the main structure in the foreground.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "store",
+                "point_2d": [
+                    270,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.22,
+                    "Y_meters": 0.22,
+                    "Z_meters": 6.27
+                },
+                "reason": "The store is visible in the background behind the bus stop.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "road",
+                "point_2d": [
+                    270,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.22,
+                    "Y_meters": 0.65,
+                    "Z_meters": 6.23
+                },
+                "reason": "The road is visible between the bus stop and the store.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "804": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "escalator",
+                "point_2d": [
+                    390,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.38,
+                    "Y_meters": -0.79,
+                    "Z_meters": 17.28
+                },
+                "reason": "The escalator is the path to go upstairs.",
+                "facing_direction": "up"
+            },
+            {
+                "name": "person",
+                "point_2d": [
+                    456,
+                    312
+                ],
+                "global_3d_position": {
+                    "X_meters": 3.46,
+                    "Y_meters": 0.27,
+                    "Z_meters": 14.47
+                },
+                "reason": "The person is on the escalator, indicating the direction to go upstairs.",
+                "facing_direction": "up"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "808": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Human",
+                "point_2d": [
+                    192,
+                    408
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.65,
+                    "Y_meters": 0.65,
+                    "Z_meters": 4.59
+                },
+                "reason": "The human is walking on the road and is the closest object to the camera before the end of the road.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "Tree",
+                "point_2d": [
+                    390,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.24,
+                    "Y_meters": -0.41,
+                    "Z_meters": 10.48
+                },
+                "reason": "The tree is on the right side of the road and is a prominent object along the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Hill",
+                "point_2d": [
+                    330,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.63,
+                    "Y_meters": -3.17,
+                    "Z_meters": 16.09
+                },
+                "reason": "The hill is in the background and is part of the landscape along the road.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "882": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "rail line",
+                "point_2d": [
+                    270,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.14,
+                    "Y_meters": 0.43,
+                    "Z_meters": 3.06
+                },
+                "reason": "The rail line is the direct straight path visible in the image, leading towards the bridge.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "bridge",
+                "point_2d": [
+                    300,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -2.5,
+                    "Z_meters": 13.28
+                },
+                "reason": "The bridge is the destination of the path, but it is not the path itself.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "human",
+                "point_2d": [
+                    180,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.4,
+                    "Y_meters": -0.04,
+                    "Z_meters": 2.1
+                },
+                "reason": "The human is using the path but is not the path itself.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "road",
+                "point_2d": [
+                    300,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.0,
+                    "Z_meters": 12.58
+                },
+                "reason": "There is no visible road in the image.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "930": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Bath & Body Works",
+                "point_2d": [
+                    426,
+                    66
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.48,
+                    "Y_meters": -4.6,
+                    "Z_meters": 15.43
+                },
+                "reason": "The store is visible on the right side of the image, on the second floor, and is the first store encountered when walking through the balcony.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Macy's",
+                "point_2d": [
+                    114,
+                    186
+                ],
+                "global_3d_position": {
+                    "X_meters": -7.69,
+                    "Y_meters": -4.71,
+                    "Z_meters": 32.43
+                },
+                "reason": "The Macy's store is visible on the left side of the image, on the second floor, and is the first store encountered when walking through the balcony.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "962": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Pull&Bear store",
+                "point_2d": [
+                    390,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.19,
+                    "Y_meters": -1.98,
+                    "Z_meters": 8.77
+                },
+                "reason": "The target store to reach.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Red and purple escalator",
+                "point_2d": [
+                    90,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": -7.49,
+                    "Y_meters": 2.14,
+                    "Z_meters": 23.73
+                },
+                "reason": "The escalator to use for going up to the Pull&Bear store.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Ground floor",
+                "point_2d": [
+                    60,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -6.38,
+                    "Y_meters": 3.99,
+                    "Z_meters": 17.68
+                },
+                "reason": "The starting point for reaching the Pull&Bear store.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "963": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "closed door",
+                "point_2d": [
+                    426,
+                    348
+                ],
+                "global_3d_position": {
+                    "X_meters": 5.17,
+                    "Y_meters": 1.97,
+                    "Z_meters": 40.48
+                },
+                "reason": "The closed door is at the end of the hallway.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "open door",
+                "point_2d": [
+                    444,
+                    348
+                ],
+                "global_3d_position": {
+                    "X_meters": 5.99,
+                    "Y_meters": 2.0,
+                    "Z_meters": 41.04
+                },
+                "reason": "The open door is at the end of the hallway.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "human",
+                "point_2d": [
+                    426,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 5.07,
+                    "Y_meters": 2.41,
+                    "Z_meters": 39.68
+                },
+                "reason": "No human is visible in the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "window",
+                "point_2d": [
+                    300,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -1.57,
+                    "Z_meters": 12.93
+                },
+                "reason": "The window is visible on the left side of the hallway.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "994": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "wooden bridge",
+                "point_2d": [
+                    330,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.21,
+                    "Y_meters": 0.21,
+                    "Z_meters": 5.29
+                },
+                "reason": "The bridge is the only safe and explicit route to cross the river as shown in the image.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "river",
+                "point_2d": [
+                    270,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.18,
+                    "Y_meters": 0.35,
+                    "Z_meters": 4.39
+                },
+                "reason": "The river is the body of water that needs to be crossed.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "grass path",
+                "point_2d": [
+                    90,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.82,
+                    "Y_meters": 0.47,
+                    "Z_meters": 2.95
+                },
+                "reason": "The grass path is an alternative route but does not cross the river.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1004": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "bus stop",
+                "point_2d": [
+                    90,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.15,
+                    "Y_meters": -0.49,
+                    "Z_meters": 6.07
+                },
+                "reason": "The bus stop is on the left side of the image, adjacent to the sidewalk.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "bus",
+                "point_2d": [
+                    300,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -0.58,
+                    "Z_meters": 5.34
+                },
+                "reason": "The bus is prominently displayed in the center of the image, facing the camera.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "sidewalk",
+                "point_2d": [
+                    150,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.85,
+                    "Y_meters": 0.17,
+                    "Z_meters": 6.26
+                },
+                "reason": "The sidewalk is visible between the bus stop and the bus, providing a path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "person",
+                "point_2d": [
+                    162,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.07,
+                    "Y_meters": -0.37,
+                    "Z_meters": 8.62
+                },
+                "reason": "The person is standing near the bus stop, facing the bus.",
+                "facing_direction": "facing right"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1013": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "wooden stair 1",
+                "point_2d": [
+                    300,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.17,
+                    "Z_meters": 1.57
+                },
+                "reason": "The first wooden stair in the foreground.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "wooden stair 2",
+                "point_2d": [
+                    300,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.12,
+                    "Z_meters": 1.64
+                },
+                "reason": "The second wooden stair.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "wooden stair 3",
+                "point_2d": [
+                    300,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.06,
+                    "Z_meters": 1.7
+                },
+                "reason": "The third wooden stair.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "wooden stair 4",
+                "point_2d": [
+                    300,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.0,
+                    "Z_meters": 2.0
+                },
+                "reason": "The fourth wooden stair.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1073": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Tree on the left side",
+                "point_2d": [
+                    120,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.33,
+                    "Y_meters": -0.22,
+                    "Z_meters": 4.4
+                },
+                "reason": "The tree on the left side is the first object encountered when ascending the stairs.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Tree on the right side",
+                "point_2d": [
+                    450,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.05,
+                    "Y_meters": -2.87,
+                    "Z_meters": 8.14
+                },
+                "reason": "The tree on the right side is encountered later than the tree on the left side.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Pebble",
+                "point_2d": [
+                    420,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.65,
+                    "Y_meters": 0.49,
+                    "Z_meters": 3.21
+                },
+                "reason": "Pebbles are present on the ground but are not the first object crossed.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Human",
+                "point_2d": [
+                    300,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -3.73,
+                    "Z_meters": 12.32
+                },
+                "reason": "No human is visible in the image.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1080": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Bench",
+                "point_2d": [
+                    234,
+                    546
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.13,
+                    "Y_meters": 0.48,
+                    "Z_meters": 1.11
+                },
+                "reason": "The bench is in the foreground and is the first object one would pass if heading towards the biggest building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Human",
+                "point_2d": [
+                    210,
+                    486
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.05,
+                    "Y_meters": 2.17,
+                    "Z_meters": 6.69
+                },
+                "reason": "A human is visible near the bench, and one would pass by them on the way to the biggest building.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Bench",
+                "point_2d": [
+                    60,
+                    546
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.55,
+                    "Y_meters": 0.57,
+                    "Z_meters": 1.32
+                },
+                "reason": "Another bench is visible in the foreground, and one would pass by it on the way to the biggest building.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Small architecture building",
+                "point_2d": [
+                    60,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.41,
+                    "Y_meters": 0.9,
+                    "Z_meters": 5.74
+                },
+                "reason": "The small architecture building is visible to the left of the biggest building and would be passed sequentially.",
+                "facing_direction": "facing right"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1091": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stone building",
+                "point_2d": [
+                    60,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.77,
+                    "Y_meters": -0.44,
+                    "Z_meters": 5.66
+                },
+                "reason": "The stone building is on the left side of the path leading to the big house.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "flower box",
+                "point_2d": [
+                    120,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.47,
+                    "Y_meters": -0.25,
+                    "Z_meters": 6.28
+                },
+                "reason": "The flower box is attached to the stone building and is along the path.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "big house",
+                "point_2d": [
+                    330,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.31,
+                    "Y_meters": -16.14,
+                    "Z_meters": 58.99
+                },
+                "reason": "The big house is the destination along the path.",
+                "facing_direction": "facing down"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1126": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stair",
+                "point_2d": [
+                    240,
+                    480
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.31,
+                    "Y_meters": 0.94,
+                    "Z_meters": 4.79
+                },
+                "reason": "The stair is the path leading to the ground level as the students are descending it.",
+                "facing_direction": "down"
+            },
+            {
+                "name": "hallway",
+                "point_2d": [
+                    360,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.36,
+                    "Y_meters": 0.36,
+                    "Z_meters": 5.54
+                },
+                "reason": "The hallway is not explicitly shown as a path leading to the ground level.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "door",
+                "point_2d": [
+                    270,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.25,
+                    "Y_meters": -0.98,
+                    "Z_meters": 7.46
+                },
+                "reason": "The door is behind the students and does not lead to the ground level.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1289": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Human",
+                "point_2d": [
+                    150,
+                    342
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.59,
+                    "Y_meters": 0.45,
+                    "Z_meters": 56.06
+                },
+                "reason": "The humans are walking on the road and are the first objects encountered sequentially.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "Vehicle",
+                "point_2d": [
+                    306,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.19,
+                    "Y_meters": -0.93,
+                    "Z_meters": 163.66
+                },
+                "reason": "The vehicle is on the road and is encountered after the humans.",
+                "facing_direction": "towards camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1304": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "path",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.28,
+                    "Y_meters": 1.41,
+                    "Z_meters": 21.14
+                },
+                "reason": "The path is clearly visible and extends towards the end of the image.",
+                "facing_direction": "facing away from camera"
+            },
+            {
+                "name": "blockade",
+                "point_2d": [
+                    330,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.62,
+                    "Y_meters": 1.24,
+                    "Z_meters": 46.47
+                },
+                "reason": "The blockade is visible at the end of the path, indicating a clear direct path to it.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1334": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Human",
+                "point_2d": [
+                    168,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.63,
+                    "Y_meters": 0.09,
+                    "Z_meters": 16.59
+                },
+                "reason": "The first person walking along the path.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "Tree",
+                "point_2d": [
+                    330,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.31,
+                    "Y_meters": -0.92,
+                    "Z_meters": 35.33
+                },
+                "reason": "The tree with cherry blossoms on the right side of the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Pillar",
+                "point_2d": [
+                    90,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -2.24,
+                    "Y_meters": -0.32,
+                    "Z_meters": 36.88
+                },
+                "reason": "The black pillar on the left side of the path.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Human",
+                "point_2d": [
+                    312,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.06,
+                    "Y_meters": 0.09,
+                    "Z_meters": 17.48
+                },
+                "reason": "The second person walking along the path.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "Car",
+                "point_2d": [
+                    126,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.9,
+                    "Y_meters": -0.33,
+                    "Z_meters": 37.63
+                },
+                "reason": "The car visible in the background on the left side of the path.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1350": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "girl in white clothes",
+                "point_2d": [
+                    78,
+                    216
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.91,
+                    "Y_meters": -0.72,
+                    "Z_meters": 6.01
+                },
+                "reason": "The girl in white clothes is on the left side of the image, facing towards the right.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "stairs",
+                "point_2d": [
+                    420,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.23,
+                    "Y_meters": 0.62,
+                    "Z_meters": 7.19
+                },
+                "reason": "The stairs are visible on the right side of the image, leading down to the ground floor.",
+                "facing_direction": "downwards"
+            },
+            {
+                "name": "hallway",
+                "point_2d": [
+                    240,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.64,
+                    "Y_meters": -0.64,
+                    "Z_meters": 7.49
+                },
+                "reason": "The hallway is visible in the center of the image, extending towards the right.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "door",
+                "point_2d": [
+                    90,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.92,
+                    "Y_meters": -1.1,
+                    "Z_meters": 6.39
+                },
+                "reason": "The door is visible on the left side of the image, where the girl in white clothes is standing.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1390": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "door_1",
+                "point_2d": [
+                    96,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.0,
+                    "Y_meters": -0.15,
+                    "Z_meters": 6.54
+                },
+                "reason": "The first door on the left side of the hallway.",
+                "facing_direction": "facing right"
+            },
+            {
+                "name": "door_2",
+                "point_2d": [
+                    438,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.09,
+                    "Y_meters": -0.24,
+                    "Z_meters": 10.49
+                },
+                "reason": "The second door on the right side of the hallway.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "door_3",
+                "point_2d": [
+                    570,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.7,
+                    "Y_meters": -0.9,
+                    "Z_meters": 13.31
+                },
+                "reason": "The third door on the right side of the hallway, partially visible.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1401": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Stairs",
+                "point_2d": [
+                    300,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.29,
+                    "Z_meters": 1.99
+                },
+                "reason": "The stairs are a prominent feature in the foreground and need to be crossed to reach the basketball hoop.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Tree",
+                "point_2d": [
+                    60,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": -5.46,
+                    "Y_meters": -4.78,
+                    "Z_meters": 18.93
+                },
+                "reason": "The tree is located near the basketball hoop and would need to be crossed or navigated around to reach the hoop.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1403": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "man in blue jacket",
+                "point_2d": [
+                    288,
+                    426
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.08,
+                    "Y_meters": 0.81,
+                    "Z_meters": 12.54
+                },
+                "reason": "The man in the blue jacket is the closest human to the camera and is walking towards the building.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "woman in left",
+                "point_2d": [
+                    168,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.02,
+                    "Y_meters": 1.16,
+                    "Z_meters": 15.03
+                },
+                "reason": "The woman in the left is walking in the same direction as the man in the blue jacket and is closer to the camera than the other people.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "woman in right",
+                "point_2d": [
+                    372,
+                    432
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.76,
+                    "Y_meters": 1.39,
+                    "Z_meters": 20.5
+                },
+                "reason": "The woman in the right is walking in the same direction as the man in the blue jacket but is further away from the camera than the woman in the left.",
+                "facing_direction": "away from camera"
+            },
+            {
+                "name": "man in white shirt",
+                "point_2d": [
+                    324,
+                    426
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.44,
+                    "Y_meters": 2.32,
+                    "Z_meters": 35.7
+                },
+                "reason": "The man in the white shirt is walking in the same direction as the man in the blue jacket but is further away from the camera than the woman in the left.",
+                "facing_direction": "away from camera"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    },
+    "1440": {
+        "task_route_used": "line1_base",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Cow",
+                "point_2d": [
+                    480,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.58,
+                    "Y_meters": 0.19,
+                    "Z_meters": 2.02
+                },
+                "reason": "The cow is the first object to be passed along the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Cart",
+                "point_2d": [
+                    240,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.41,
+                    "Y_meters": -0.41,
+                    "Z_meters": 4.25
+                },
+                "reason": "The cart is the second object to be passed along the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Bus",
+                "point_2d": [
+                    90,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -3.1,
+                    "Y_meters": -1.77,
+                    "Z_meters": 9.24
+                },
+                "reason": "The bus is the third object to be passed along the road.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "Human",
+                "point_2d": [
+                    30,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -4.61,
+                    "Y_meters": -1.54,
+                    "Z_meters": 10.68
+                },
+                "reason": "The human is the fourth object to be passed along the road.",
+                "facing_direction": "facing right"
+            }
+        ],
+        "spatial_relations_text": "\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Spatial Sequence) ---\n- Spatial sequence questions ask for the order in which objects are encountered along a specific route, not a global ranking by depth or distance from the camera. The encounter order depends on the chosen path and the agent's heading direction.\n- To determine which object is passed first, project all candidate objects onto the path centerline and sort by along-path distance. In a straight corridor this approximates depth order, but on a curving road the ordering may differ from simple row comparisons.\n- The 'end of the road' is defined by following the road's visible trajectory to its terminus, not by selecting the grid cell with the smallest row index. Road curvature, forks, and dead-ends must be considered.\n- When asked how many pillars, doors, or objects must be passed to reach a target, count only those that lie sequentially along the route corridor before the target. Objects behind the agent, in side rooms, or past the target should not be counted.\n- Left and right should be interpreted relative to the direction of travel, not relative to the camera's image axes. On a road heading away from the camera, camera-left corresponds to the traveler's left only if the traveler faces the same direction as the camera.\n- If a path is partially obstructed (e.g., bushes before a bridge, barrier before a platform), the sequence of passable objects may terminate earlier than the visually farthest landmark. Do not assume the agent reaches the most distant visible object.\n- For truth-valued sequence questions (e.g., 'A truck will face obstacles—is it true?'), use evidence visible in the scene. If future road conditions are hidden or ambiguous, 'maybe' or 'cannot determine' is more appropriate than a confident yes or no.\n- When a person is described as 'facing' or 'walking toward' a destination, the first object they pass is the one closest to them along their forward direction, not the object nearest to the camera or nearest in absolute grid distance."
+    }
+}
