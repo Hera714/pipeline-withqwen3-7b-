@@ -1,0 +1,2110 @@
+{
+    "1": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Trolley",
+                "point_2d": [
+                    306,
+                    246
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.02,
+                    "Y_meters": -0.2,
+                    "Z_meters": 6.1
+                },
+                "reason": "The trolley is the most prominent object in the foreground of the image.",
+                "anchor_parts": "wheels and handle",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "away"
+            },
+            {
+                "name": "Man",
+                "point_2d": [
+                    366,
+                    246
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.24,
+                    "Y_meters": -0.19,
+                    "Z_meters": 5.98
+                },
+                "reason": "The man is seated on the trolley and is a key figure in the image.",
+                "anchor_parts": "head and torso",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Woman",
+                "point_2d": [
+                    126,
+                    246
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.68,
+                    "Y_meters": -0.52,
+                    "Z_meters": 16.15
+                },
+                "reason": "The woman is seated on the bench and is another key figure in the image.",
+                "anchor_parts": "head and torso",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Box",
+                "point_2d": [
+                    342,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.15,
+                    "Y_meters": -0.17,
+                    "Z_meters": 5.96
+                },
+                "reason": "The blue box is on top of the trolley and is a notable object.",
+                "anchor_parts": "top and sides",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "away"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Trolley]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [Man]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [Woman]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [Box]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: Man is CLOSER to the camera than Trolley.\n- [Horizontal]: Trolley is to the LEFT of Man.\n- [Depth]: Trolley is CLOSER to the camera than Woman.\n- [Horizontal]: Woman is to the LEFT of Trolley.\n- [Depth]: Box is CLOSER to the camera than Trolley.\n- [Horizontal]: Trolley is to the LEFT of Box.\n- [Depth]: Man is CLOSER to the camera than Woman.\n- [Horizontal]: Woman is to the LEFT of Man.\n- [Depth]: Box is CLOSER to the camera than Man.\n- [Horizontal]: Box is to the LEFT of Man.\n- [Depth]: Box is CLOSER to the camera than Woman.\n- [Horizontal]: Woman is to the LEFT of Box.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Perpendicularity]: 'Trolley' is 'frontal' and 'Man' is 'side_profile'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Perpendicularity]: 'Trolley' is 'frontal' and 'Woman' is 'side_profile'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Parallelism]: Both 'Trolley' and 'Box' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'away'. They are facing the SAME direction.\n- [Parallelism]: Both 'Man' and 'Woman' present a strict 'side_profile'. Their longitudinal axes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Perpendicularity]: 'Man' is 'side_profile' and 'Box' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Perpendicularity]: 'Woman' is 'side_profile' and 'Box' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other."
+    },
+    "2": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Character 1 (left)",
+                "point_2d": [
+                    171,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.23,
+                    "Y_meters": -0.38,
+                    "Z_meters": 1.58
+                },
+                "reason": "Tallest point of the character on the left.",
+                "bbox_2d": [
+                    78,
+                    15,
+                    264,
+                    597
+                ],
+                "Physical_Height": 1.04,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.51,
+                "Bottom_Y_meters": 0.53
+            },
+            {
+                "name": "Character 2 (middle)",
+                "point_2d": [
+                    381,
+                    60
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.17,
+                    "Y_meters": -0.5,
+                    "Z_meters": 1.83
+                },
+                "reason": "Tallest point of the character in the middle.",
+                "bbox_2d": [
+                    300,
+                    0,
+                    462,
+                    300
+                ],
+                "Physical_Height": 0.62,
+                "Physical_Width": 0.34,
+                "Top_Y_meters": -0.62,
+                "Bottom_Y_meters": 0.0
+            },
+            {
+                "name": "Character 3 (right)",
+                "point_2d": [
+                    510,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.49,
+                    "Y_meters": -0.42,
+                    "Z_meters": 2.05
+                },
+                "reason": "Tallest point of the character on the right.",
+                "bbox_2d": [
+                    456,
+                    45,
+                    597,
+                    597
+                ],
+                "Physical_Height": 1.28,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.59,
+                "Bottom_Y_meters": 0.69
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Character 2 (middle)' is SHORTER/SMALLER than 'Character 1 (left)'.\n- 'Character 1 (left)' is SHORTER/SMALLER than 'Character 3 (right)'.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'Character 2 (middle)' is IN FRONT OF and PARTIALLY OCCLUDES 'Character 3 (right)'."
+    },
+    "3": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "cow1",
+                "point_2d": [
+                    447,
+                    186
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.13,
+                    "Y_meters": -0.88,
+                    "Z_meters": 6.84
+                },
+                "reason": "The cow is standing next to a cart and is clearly visible.",
+                "bbox_2d": [
+                    375,
+                    125,
+                    519,
+                    231
+                ],
+                "Physical_Height": 0.82,
+                "Physical_Width": 1.11,
+                "Top_Y_meters": -1.35,
+                "Bottom_Y_meters": -0.53
+            },
+            {
+                "name": "cow2",
+                "point_2d": [
+                    504,
+                    162
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.52,
+                    "Y_meters": -1.03,
+                    "Z_meters": 6.62
+                },
+                "reason": "The cow is standing next to cow1 and is clearly visible.",
+                "bbox_2d": [
+                    459,
+                    123,
+                    549,
+                    201
+                ],
+                "Physical_Height": 0.58,
+                "Physical_Width": 0.67,
+                "Top_Y_meters": -1.32,
+                "Bottom_Y_meters": -0.74
+            },
+            {
+                "name": "cow3",
+                "point_2d": [
+                    483,
+                    117
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.76,
+                    "Y_meters": -1.76,
+                    "Z_meters": 8.51
+                },
+                "reason": "The cow is standing behind cow1 and is clearly visible.",
+                "bbox_2d": [
+                    435,
+                    102,
+                    534,
+                    132
+                ],
+                "Physical_Height": 0.29,
+                "Physical_Width": 0.95,
+                "Top_Y_meters": -1.9,
+                "Bottom_Y_meters": -1.61
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'cow3' is SHORTER/SMALLER than 'cow2'.\n- 'cow2' is SHORTER/SMALLER than 'cow1'.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'cow2' is IN FRONT OF and PARTIALLY OCCLUDES 'cow1'.\n- [Occlusion]: 'cow1' is IN FRONT OF and PARTIALLY OCCLUDES 'cow3'.\n- [Occlusion]: 'cow2' is IN FRONT OF and PARTIALLY OCCLUDES 'cow3'."
+    },
+    "4": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "5": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "7": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "candy cane",
+                "point_2d": [
+                    60,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.14,
+                    "Y_meters": -0.02,
+                    "Z_meters": 0.72
+                },
+                "reason": "The candy cane is hooked onto the rim of the mug, preventing it from falling in.",
+                "anchor_parts": "hook and candy",
+                "visible_profile": "diagonal_front",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "mug",
+                "point_2d": [
+                    180,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.06,
+                    "Y_meters": 0.01,
+                    "Z_meters": 0.61
+                },
+                "reason": "The mug is the object the candy cane is hooked onto.",
+                "anchor_parts": "rim and handle",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "scarf",
+                "point_2d": [
+                    120,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.09,
+                    "Y_meters": 0.06,
+                    "Z_meters": 0.63
+                },
+                "reason": "The scarf is part of the scene but not directly involved in the candy cane's position.",
+                "anchor_parts": "knitted pattern",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            },
+            {
+                "name": "gloves",
+                "point_2d": [
+                    480,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.1,
+                    "Y_meters": 0.06,
+                    "Z_meters": 0.66
+                },
+                "reason": "The gloves are part of the scene but not directly involved in the candy cane's position.",
+                "anchor_parts": "striped pattern",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [candy cane]: Presents a 'diagonal_front' view pointing 'right'. This indicates the object is ROTATED/ANGLED (oblique to the camera's line-of-sight).\n- [mug]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [scarf]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [gloves]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: mug is CLOSER to the camera than candy cane.\n- [Horizontal]: candy cane is to the LEFT of mug.\n- [Depth]: scarf is CLOSER to the camera than candy cane.\n- [Horizontal]: candy cane is to the LEFT of scarf.\n- [Depth]: gloves is CLOSER to the camera than candy cane.\n- [Horizontal]: candy cane is to the LEFT of gloves.\n- [Depth]: mug is CLOSER to the camera than scarf.\n- [Horizontal]: scarf is to the LEFT of mug.\n- [Depth]: mug is CLOSER to the camera than gloves.\n- [Horizontal]: mug is to the LEFT of gloves.\n- [Depth]: scarf is CLOSER to the camera than gloves.\n- [Horizontal]: scarf is to the LEFT of gloves.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Parallelism]: Both 'mug' and 'scarf' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Parallelism]: Both 'mug' and 'gloves' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Parallelism]: Both 'scarf' and 'gloves' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'down'. They are facing the SAME direction."
+    },
+    "8": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "9": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "10": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "paint palette",
+                "point_2d": [
+                    525,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.43,
+                    "Y_meters": -0.17,
+                    "Z_meters": 1.29
+                },
+                "reason": "The paint palette is clearly visible in the foreground, containing various colors of paint.",
+                "bbox_2d": [
+                    450,
+                    105,
+                    599,
+                    315
+                ],
+                "Physical_Height": 0.4,
+                "Physical_Width": 0.29,
+                "Top_Y_meters": -0.38,
+                "Bottom_Y_meters": 0.03
+            },
+            {
+                "name": "color brushes",
+                "point_2d": [
+                    525,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.42,
+                    "Y_meters": 0.0,
+                    "Z_meters": 1.26
+                },
+                "reason": "The color brushes are positioned next to the paint palette, with their bristles pointing towards the palette.",
+                "bbox_2d": [
+                    435,
+                    165,
+                    599,
+                    435
+                ],
+                "Physical_Height": 0.51,
+                "Physical_Width": 0.31,
+                "Top_Y_meters": -0.25,
+                "Bottom_Y_meters": 0.25
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'paint palette' is SHORTER/SMALLER than 'color brushes'.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "11": {
+        "task_route_used": "line1_base",
+        "controller_reason": "The question involves orientation and direction, which aligns with the capabilities of line2_orientation. | repaired_by_hard_patterns: line2_orientation->line1_base",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "teacher",
+                "point_2d": [
+                    510,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.78,
+                    "Y_meters": -0.4,
+                    "Z_meters": 8.41
+                },
+                "reason": "The teacher is standing and facing towards the left side of the image, where most of the students are seated.",
+                "facing_direction": "facing left"
+            },
+            {
+                "name": "students",
+                "point_2d": [
+                    270,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.2,
+                    "Y_meters": 0.4,
+                    "Z_meters": 4.25
+                },
+                "reason": "The students are seated and facing towards the teacher, who is on the right side of the image.",
+                "facing_direction": "facing right"
+            }
+        ],
+        "spatial_relations_text": ""
+    },
+    "12": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Red bus",
+                "point_2d": [
+                    426,
+                    192
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.23,
+                    "Y_meters": -1.05,
+                    "Z_meters": 7.32
+                },
+                "reason": "The red bus is located at the corner of the scene beside the black car.",
+                "anchor_parts": "front and side",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "Black car",
+                "point_2d": [
+                    366,
+                    312
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.55,
+                    "Y_meters": 0.1,
+                    "Z_meters": 6.2
+                },
+                "reason": "The black car is located at the corner of the scene beside the red bus.",
+                "anchor_parts": "front and side",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "Police officer",
+                "point_2d": [
+                    126,
+                    312
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.72,
+                    "Y_meters": 0.05,
+                    "Z_meters": 3.09
+                },
+                "reason": "The police officer is standing beside the black car.",
+                "anchor_parts": "torso and legs",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Red bus]: Presents a strict 'side_profile' view pointing 'right'. This indicates it is positioned laterally (side-ways).\n- [Black car]: Presents a strict 'side_profile' view pointing 'right'. This indicates it is positioned laterally (side-ways).\n- [Police officer]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: Black car is CLOSER to the camera than Red bus.\n- [Horizontal]: Black car is to the LEFT of Red bus.\n- [Depth]: Police officer is CLOSER to the camera than Red bus.\n- [Horizontal]: Police officer is to the LEFT of Red bus.\n- [Depth]: Police officer is CLOSER to the camera than Black car.\n- [Horizontal]: Police officer is to the LEFT of Black car.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'Red bus' and 'Black car' present a strict 'side_profile'. Their longitudinal axes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Perpendicularity]: 'Red bus' is 'side_profile' and 'Police officer' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Relative Direction]: 'Red bus' points 'right' while 'Police officer' points 'left'. They are pointing in OPPOSITE / DIVERGING directions.\n- [Perpendicularity]: 'Black car' is 'side_profile' and 'Police officer' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Relative Direction]: 'Black car' points 'right' while 'Police officer' points 'left'. They are pointing in OPPOSITE / DIVERGING directions."
+    },
+    "13": {
+        "task_route_used": "line1_base",
+        "controller_reason": "The question involves direction and orientation, which aligns with the capabilities of line2_orientation. | repaired_by_hard_patterns: line2_orientation->line1_base",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "truck",
+                "point_2d": [
+                    192,
+                    252
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.8,
+                    "Y_meters": -0.36,
+                    "Z_meters": 7.58
+                },
+                "reason": "The truck is positioned in the middle of the street and appears to be facing left.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": ""
+    },
+    "14": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "glass on table",
+                "point_2d": [
+                    450,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.61,
+                    "Y_meters": 0.37,
+                    "Z_meters": 3.01
+                },
+                "reason": "The glass is positioned on the table, and the wind from the left side would cause it to tip over first.",
+                "anchor_parts": "base and rim",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            },
+            {
+                "name": "table",
+                "point_2d": [
+                    360,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.23,
+                    "Y_meters": 0.47,
+                    "Z_meters": 2.88
+                },
+                "reason": "The table is the surface on which the glass is placed, and the wind direction is critical to determine spillage.",
+                "anchor_parts": "top surface",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [glass on table]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [table]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: table is CLOSER to the camera than glass on table.\n- [Horizontal]: table is to the LEFT of glass on table.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'glass on table' and 'table' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'down'. They are facing the SAME direction."
+    },
+    "15": {
+        "task_route_used": "line1_base",
+        "controller_reason": "The question involves a scenario that requires understanding of physical dynamics and safety, which is not covered by the specific routes designed for spatial reasoning.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Human",
+                "point_2d": [
+                    282,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.07,
+                    "Y_meters": -0.36,
+                    "Z_meters": 7.05
+                },
+                "reason": "The human is the main subject of the image and is positioned above the street.",
+                "facing_direction": "facing camera"
+            },
+            {
+                "name": "Street",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.12,
+                    "Y_meters": 5.62,
+                    "Z_meters": 66.65
+                },
+                "reason": "The street is the surface below the human, where he would land if he jumps.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Building",
+                "point_2d": [
+                    330,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.09,
+                    "Y_meters": -0.66,
+                    "Z_meters": 5.56
+                },
+                "reason": "The building is the structure from which the human is hanging, indicating a significant height.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "Cars",
+                "point_2d": [
+                    150,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -8.4,
+                    "Y_meters": 6.72,
+                    "Z_meters": 99.63
+                },
+                "reason": "The cars on the street indicate the scale and the potential danger if the human were to jump.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": ""
+    },
+    "17": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "18": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "black chair",
+                "point_2d": [
+                    240,
+                    528
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.29,
+                    "Y_meters": 1.1,
+                    "Z_meters": 3.22
+                },
+                "reason": "The black chair is the foremost object in the picture, positioned closest to the camera.",
+                "anchor_parts": "backrest and seat",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "grey chair",
+                "point_2d": [
+                    180,
+                    528
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.42,
+                    "Y_meters": 0.8,
+                    "Z_meters": 2.35
+                },
+                "reason": "The grey chair is visible in the foreground, positioned slightly behind the black chair.",
+                "anchor_parts": "backrest and seat",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "white table",
+                "point_2d": [
+                    60,
+                    480
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.15,
+                    "Y_meters": 0.86,
+                    "Z_meters": 3.2
+                },
+                "reason": "The white table is visible in the foreground, supporting various objects.",
+                "anchor_parts": "top surface",
+                "visible_profile": "top",
+                "2d_pointing_direction": "up"
+            },
+            {
+                "name": "stack of two notebooks",
+                "point_2d": [
+                    90,
+                    498
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.94,
+                    "Y_meters": 0.89,
+                    "Z_meters": 2.99
+                },
+                "reason": "The stack of two notebooks is visible on the white table.",
+                "anchor_parts": "covers",
+                "visible_profile": "top",
+                "2d_pointing_direction": "up"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [black chair]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [grey chair]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: grey chair is CLOSER to the camera than black chair.\n- [Horizontal]: grey chair is to the LEFT of black chair.\n- [Depth]: white table is CLOSER to the camera than black chair.\n- [Horizontal]: white table is to the LEFT of black chair.\n- [Depth]: stack of two notebooks is CLOSER to the camera than black chair.\n- [Horizontal]: stack of two notebooks is to the LEFT of black chair.\n- [Depth]: grey chair is CLOSER to the camera than white table.\n- [Horizontal]: white table is to the LEFT of grey chair.\n- [Depth]: grey chair is CLOSER to the camera than stack of two notebooks.\n- [Horizontal]: stack of two notebooks is to the LEFT of grey chair.\n- [Depth]: stack of two notebooks is CLOSER to the camera than white table.\n- [Horizontal]: white table is to the LEFT of stack of two notebooks.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'black chair' and 'grey chair' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction."
+    },
+    "19": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Steering Wheel",
+                "point_2d": [
+                    309,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.01,
+                    "Y_meters": 0.11,
+                    "Z_meters": 0.63
+                },
+                "reason": "The steering wheel is the primary object of interest for determining the angle of turn.",
+                "bbox_2d": [
+                    141,
+                    250,
+                    507,
+                    599
+                ],
+                "Physical_Height": 0.31,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.04,
+                "Bottom_Y_meters": 0.27
+            },
+            {
+                "name": "Driver's Hand",
+                "point_2d": [
+                    165,
+                    555
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": 0.22,
+                    "Z_meters": 0.6
+                },
+                "reason": "The driver's hand position indicates the steering wheel's orientation.",
+                "bbox_2d": [
+                    129,
+                    520,
+                    195,
+                    599
+                ],
+                "Physical_Height": 0.07,
+                "Physical_Width": 0.06,
+                "Top_Y_meters": 0.19,
+                "Bottom_Y_meters": 0.25
+            },
+            {
+                "name": "Road Sign",
+                "point_2d": [
+                    489,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.65,
+                    "Y_meters": -0.52,
+                    "Z_meters": 2.44
+                },
+                "reason": "The road sign provides context for the direction of travel, which can help infer the steering wheel's angle.",
+                "bbox_2d": [
+                    399,
+                    120,
+                    599,
+                    180
+                ],
+                "Physical_Height": 0.21,
+                "Physical_Width": 0.69,
+                "Top_Y_meters": -0.62,
+                "Bottom_Y_meters": -0.42
+            },
+            {
+                "name": "Driver's Arm",
+                "point_2d": [
+                    480,
+                    360
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.14,
+                    "Y_meters": 0.05,
+                    "Z_meters": 0.55
+                },
+                "reason": "The driver's arm position relative to the steering wheel helps determine the angle.",
+                "bbox_2d": [
+                    360,
+                    230,
+                    599,
+                    520
+                ],
+                "Physical_Height": 0.22,
+                "Physical_Width": 0.18,
+                "Top_Y_meters": -0.05,
+                "Bottom_Y_meters": 0.17
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Driver's Hand' is SHORTER/SMALLER than 'Road Sign'.\n- 'Road Sign' and 'Driver's Arm' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Driver's Arm' is SHORTER/SMALLER than 'Steering Wheel'.\n\n=== Horizontal Level Alignment ===\n- [Alignment]: The bases of 'Steering Wheel' and 'Driver's Hand' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Steering Wheel' and 'Driver's Arm' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Driver's Hand' and 'Driver's Arm' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "20": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "woman in red shirt in ponytail",
+                "point_2d": [
+                    102,
+                    396
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.58,
+                    "Y_meters": 0.76,
+                    "Z_meters": 8.27
+                },
+                "reason": "The woman in the red shirt in ponytail is the reference object.",
+                "anchor_parts": "back and ponytail",
+                "visible_profile": "back",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "woman with long hair",
+                "point_2d": [
+                    132,
+                    408
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.95,
+                    "Y_meters": 0.61,
+                    "Z_meters": 5.89
+                },
+                "reason": "The woman with long hair is immediately to the left of the woman in the red shirt in ponytail.",
+                "anchor_parts": "back and hair",
+                "visible_profile": "back",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "blonde woman with grey shirt",
+                "point_2d": [
+                    300,
+                    402
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.43,
+                    "Z_meters": 4.35
+                },
+                "reason": "The blonde woman with grey shirt is another student in the classroom.",
+                "anchor_parts": "back and hair",
+                "visible_profile": "back",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "boy",
+                "point_2d": [
+                    540,
+                    354
+                ],
+                "global_3d_position": {
+                    "X_meters": 2.83,
+                    "Y_meters": 0.64,
+                    "Z_meters": 12.24
+                },
+                "reason": "The boy is another student in the classroom.",
+                "anchor_parts": "back and head",
+                "visible_profile": "back",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "girl with red shirt",
+                "point_2d": [
+                    474,
+                    426
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.31,
+                    "Y_meters": 0.95,
+                    "Z_meters": 7.79
+                },
+                "reason": "The girl with red shirt is another student in the classroom.",
+                "anchor_parts": "back and hair",
+                "visible_profile": "back",
+                "2d_pointing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [woman in red shirt in ponytail]: Presents a 'back' view. It is aligned with the camera axis.\n- [woman with long hair]: Presents a 'back' view. It is aligned with the camera axis.\n- [blonde woman with grey shirt]: Presents a 'back' view. It is aligned with the camera axis.\n- [boy]: Presents a 'back' view. It is aligned with the camera axis.\n- [girl with red shirt]: Presents a 'back' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: woman with long hair is CLOSER to the camera than woman in red shirt in ponytail.\n- [Horizontal]: woman in red shirt in ponytail is to the LEFT of woman with long hair.\n- [Depth]: blonde woman with grey shirt is CLOSER to the camera than woman in red shirt in ponytail.\n- [Horizontal]: woman in red shirt in ponytail is to the LEFT of blonde woman with grey shirt.\n- [Depth]: woman in red shirt in ponytail is CLOSER to the camera than boy.\n- [Horizontal]: woman in red shirt in ponytail is to the LEFT of boy.\n- [Depth]: girl with red shirt is CLOSER to the camera than woman in red shirt in ponytail.\n- [Horizontal]: woman in red shirt in ponytail is to the LEFT of girl with red shirt.\n- [Depth]: blonde woman with grey shirt is CLOSER to the camera than woman with long hair.\n- [Horizontal]: woman with long hair is to the LEFT of blonde woman with grey shirt.\n- [Depth]: woman with long hair is CLOSER to the camera than boy.\n- [Horizontal]: woman with long hair is to the LEFT of boy.\n- [Depth]: woman with long hair is CLOSER to the camera than girl with red shirt.\n- [Horizontal]: woman with long hair is to the LEFT of girl with red shirt.\n- [Depth]: blonde woman with grey shirt is CLOSER to the camera than boy.\n- [Horizontal]: blonde woman with grey shirt is to the LEFT of boy.\n- [Depth]: blonde woman with grey shirt is CLOSER to the camera than girl with red shirt.\n- [Horizontal]: blonde woman with grey shirt is to the LEFT of girl with red shirt.\n- [Depth]: girl with red shirt is CLOSER to the camera than boy.\n- [Horizontal]: girl with red shirt is to the LEFT of boy.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'woman in red shirt in ponytail' and 'woman with long hair' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman in red shirt in ponytail' and 'blonde woman with grey shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman in red shirt in ponytail' and 'boy' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman in red shirt in ponytail' and 'girl with red shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman with long hair' and 'blonde woman with grey shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman with long hair' and 'boy' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'woman with long hair' and 'girl with red shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'blonde woman with grey shirt' and 'boy' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'blonde woman with grey shirt' and 'girl with red shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction.\n- [Parallelism]: Both 'boy' and 'girl with red shirt' present a 'back'/'back' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'right'. They are facing the SAME direction."
+    },
+    "21": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stairs",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": 0.55,
+                    "Z_meters": 2.6
+                },
+                "reason": "The stairs are the main subject and their angle relative to the ground is the focus of the question.",
+                "anchor_parts": "railing and steps",
+                "visible_profile": "diagonal_front",
+                "2d_pointing_direction": "up"
+            },
+            {
+                "name": "piano",
+                "point_2d": [
+                    90,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.64,
+                    "Y_meters": 0.36,
+                    "Z_meters": 2.16
+                },
+                "reason": "The piano is a prominent object in the foreground, providing context to the scene.",
+                "anchor_parts": "top and front panel",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "camera"
+            },
+            {
+                "name": "painting",
+                "point_2d": [
+                    48,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.92,
+                    "Y_meters": -0.04,
+                    "Z_meters": 2.59
+                },
+                "reason": "The painting is on the piano, adding to the visual elements of the scene.",
+                "anchor_parts": "frame and canvas",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "camera"
+            },
+            {
+                "name": "chandelier",
+                "point_2d": [
+                    252,
+                    48
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.21,
+                    "Y_meters": -1.11,
+                    "Z_meters": 3.14
+                },
+                "reason": "The chandelier is a key decorative element in the image.",
+                "anchor_parts": "frame and lights",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            },
+            {
+                "name": "dining table",
+                "point_2d": [
+                    390,
+                    312
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.39,
+                    "Y_meters": 0.05,
+                    "Z_meters": 3.12
+                },
+                "reason": "The dining table is visible in the background, contributing to the overall composition.",
+                "anchor_parts": "top and legs",
+                "visible_profile": "diagonal_front",
+                "2d_pointing_direction": "away"
+            },
+            {
+                "name": "door",
+                "point_2d": [
+                    540,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.48,
+                    "Y_meters": -0.19,
+                    "Z_meters": 4.4
+                },
+                "reason": "The door is a significant structural element in the image.",
+                "anchor_parts": "frame and glass panels",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [stairs]: Presents a 'diagonal_front' view pointing 'up'. This indicates the object is ROTATED/ANGLED (oblique to the camera's line-of-sight).\n- [piano]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [painting]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [chandelier]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [dining table]: Presents a 'diagonal_front' view pointing 'away'. This indicates the object is ROTATED/ANGLED (oblique to the camera's line-of-sight).\n- [door]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: piano is CLOSER to the camera than stairs.\n- [Horizontal]: piano is to the LEFT of stairs.\n- [Depth]: painting is CLOSER to the camera than stairs.\n- [Horizontal]: painting is to the LEFT of stairs.\n- [Depth]: stairs is CLOSER to the camera than chandelier.\n- [Horizontal]: chandelier is to the LEFT of stairs.\n- [Depth]: stairs is CLOSER to the camera than dining table.\n- [Horizontal]: stairs is to the LEFT of dining table.\n- [Depth]: stairs is CLOSER to the camera than door.\n- [Horizontal]: stairs is to the LEFT of door.\n- [Depth]: piano is CLOSER to the camera than painting.\n- [Horizontal]: painting is to the LEFT of piano.\n- [Depth]: piano is CLOSER to the camera than chandelier.\n- [Horizontal]: piano is to the LEFT of chandelier.\n- [Depth]: piano is CLOSER to the camera than dining table.\n- [Horizontal]: piano is to the LEFT of dining table.\n- [Depth]: piano is CLOSER to the camera than door.\n- [Horizontal]: piano is to the LEFT of door.\n- [Depth]: painting is CLOSER to the camera than chandelier.\n- [Horizontal]: painting is to the LEFT of chandelier.\n- [Depth]: painting is CLOSER to the camera than dining table.\n- [Horizontal]: painting is to the LEFT of dining table.\n- [Depth]: painting is CLOSER to the camera than door.\n- [Horizontal]: painting is to the LEFT of door.\n- [Depth]: dining table is CLOSER to the camera than chandelier.\n- [Horizontal]: chandelier is to the LEFT of dining table.\n- [Depth]: chandelier is CLOSER to the camera than door.\n- [Horizontal]: chandelier is to the LEFT of door.\n- [Depth]: dining table is CLOSER to the camera than door.\n- [Horizontal]: dining table is to the LEFT of door.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: 'stairs' points 'up' while 'chandelier' points 'down'. They are pointing in OPPOSITE / DIVERGING directions.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Parallelism]: Both 'piano' and 'painting' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'camera'. They are facing the SAME direction.\n- [Parallelism]: Both 'piano' and 'chandelier' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Alignment/Rotation]: One is 'frontal' and the other is 'diagonal_front'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: 'piano' points 'camera' while 'dining table' points 'away'. They are pointing in OPPOSITE / DIVERGING directions.\n- [Parallelism]: Both 'piano' and 'door' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Parallelism]: Both 'painting' and 'chandelier' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Alignment/Rotation]: One is 'frontal' and the other is 'diagonal_front'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: 'painting' points 'camera' while 'dining table' points 'away'. They are pointing in OPPOSITE / DIVERGING directions.\n- [Parallelism]: Both 'painting' and 'door' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Alignment/Rotation]: One is 'frontal' and the other is 'diagonal_front'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Parallelism]: Both 'chandelier' and 'door' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other."
+    },
+    "23": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "24": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Speed Limit Sign",
+                "point_2d": [
+                    350,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.07,
+                    "Y_meters": -0.21,
+                    "Z_meters": 2.53
+                },
+                "reason": "The sign is the main subject of the image and is tilted.",
+                "bbox_2d": [
+                    238,
+                    15,
+                    465,
+                    270
+                ],
+                "Physical_Height": 0.35,
+                "Physical_Width": 0.31,
+                "Top_Y_meters": -0.39,
+                "Bottom_Y_meters": -0.04
+            },
+            {
+                "name": "Metal Pole",
+                "point_2d": [
+                    252,
+                    420
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.07,
+                    "Y_meters": 0.17,
+                    "Z_meters": 2.57
+                },
+                "reason": "The pole supports the speed limit sign and is tilted.",
+                "bbox_2d": [
+                    190,
+                    258,
+                    315,
+                    576
+                ],
+                "Physical_Height": 0.44,
+                "Physical_Width": 0.17,
+                "Top_Y_meters": -0.06,
+                "Bottom_Y_meters": 0.39
+            },
+            {
+                "name": "Bush",
+                "point_2d": [
+                    240,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.08,
+                    "Y_meters": 0.21,
+                    "Z_meters": 2.6
+                },
+                "reason": "The bush is in the foreground and partially obscures the pole.",
+                "bbox_2d": [
+                    0,
+                    192,
+                    480,
+                    597
+                ],
+                "Physical_Height": 0.57,
+                "Physical_Width": 0.68,
+                "Top_Y_meters": -0.15,
+                "Bottom_Y_meters": 0.42
+            },
+            {
+                "name": "Gravel",
+                "point_2d": [
+                    390,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.6,
+                    "Y_meters": 0.2,
+                    "Z_meters": 12.23
+                },
+                "reason": "The gravel is in the background and provides context for the location.",
+                "bbox_2d": [
+                    180,
+                    282,
+                    599,
+                    402
+                ],
+                "Physical_Height": 0.8,
+                "Physical_Width": 2.78,
+                "Top_Y_meters": -0.12,
+                "Bottom_Y_meters": 0.68
+            },
+            {
+                "name": "Train Tracks",
+                "point_2d": [
+                    300,
+                    285
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -0.02,
+                    "Z_meters": 2.55
+                },
+                "reason": "The train tracks are in the background and provide context for the location.",
+                "bbox_2d": [
+                    0,
+                    240,
+                    599,
+                    330
+                ],
+                "Physical_Height": 0.12,
+                "Physical_Width": 0.83,
+                "Top_Y_meters": -0.08,
+                "Bottom_Y_meters": 0.04
+            },
+            {
+                "name": "Trees",
+                "point_2d": [
+                    297,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.0,
+                    "Y_meters": -0.25,
+                    "Z_meters": 2.52
+                },
+                "reason": "The trees are in the background and provide context for the location.",
+                "bbox_2d": [
+                    0,
+                    0,
+                    599,
+                    288
+                ],
+                "Physical_Height": 0.39,
+                "Physical_Width": 0.82,
+                "Top_Y_meters": -0.41,
+                "Bottom_Y_meters": -0.02
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Train Tracks' is SHORTER/SMALLER than 'Speed Limit Sign'.\n- 'Speed Limit Sign' and 'Trees' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Trees' and 'Metal Pole' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Metal Pole' is SHORTER/SMALLER than 'Bush'.\n- 'Bush' is SHORTER/SMALLER than 'Gravel'.\n\n=== Horizontal Level Alignment ===\n- [Alignment]: The bases of 'Speed Limit Sign' and 'Train Tracks' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Speed Limit Sign' and 'Trees' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Metal Pole' and 'Bush' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Train Tracks' and 'Trees' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'Metal Pole' is IN FRONT OF and PARTIALLY OCCLUDES 'Gravel'.\n- [Occlusion]: 'Bush' is IN FRONT OF and PARTIALLY OCCLUDES 'Gravel'.\n- [Occlusion]: 'Train Tracks' is IN FRONT OF and PARTIALLY OCCLUDES 'Gravel'.\n- [Occlusion]: 'Trees' is IN FRONT OF and PARTIALLY OCCLUDES 'Gravel'."
+    },
+    "25": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Robot Arm 1",
+                "point_2d": [
+                    174,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.77,
+                    "Y_meters": -0.18,
+                    "Z_meters": 7.28
+                },
+                "reason": "The first robot arm is visible on the left side of the image.",
+                "bbox_2d": [
+                    66,
+                    150,
+                    282,
+                    390
+                ],
+                "Physical_Height": 1.46,
+                "Physical_Width": 1.31,
+                "Top_Y_meters": -0.91,
+                "Bottom_Y_meters": 0.55
+            },
+            {
+                "name": "Robot Arm 2",
+                "point_2d": [
+                    444,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.07,
+                    "Y_meters": -0.09,
+                    "Z_meters": 8.86
+                },
+                "reason": "The second robot arm is visible on the right side of the image.",
+                "bbox_2d": [
+                    354,
+                    210,
+                    576,
+                    390
+                ],
+                "Physical_Height": 1.33,
+                "Physical_Width": 1.64,
+                "Top_Y_meters": -0.67,
+                "Bottom_Y_meters": 0.67
+            },
+            {
+                "name": "Workstation",
+                "point_2d": [
+                    300,
+                    480
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.6,
+                    "Z_meters": 3.99
+                },
+                "reason": "The workstation is the surface on which the robot arms are positioned.",
+                "bbox_2d": [
+                    0,
+                    348,
+                    599,
+                    594
+                ],
+                "Physical_Height": 0.82,
+                "Physical_Width": 2.0,
+                "Top_Y_meters": 0.16,
+                "Bottom_Y_meters": 0.98
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Workstation' is SHORTER/SMALLER than 'Robot Arm 2'.\n- 'Robot Arm 2' and 'Robot Arm 1' are of APPROXIMATELY SIMILAR HEIGHT.\n\n=== Horizontal Level Alignment ===\n- [Alignment]: The bases of 'Robot Arm 1' and 'Robot Arm 2' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'Workstation' is IN FRONT OF and PARTIALLY OCCLUDES 'Robot Arm 1'.\n- [Occlusion]: 'Workstation' is IN FRONT OF and PARTIALLY OCCLUDES 'Robot Arm 2'."
+    },
+    "26": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "27": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "28": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Crowd 1",
+                "point_2d": [
+                    90,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.63,
+                    "Y_meters": 0.45,
+                    "Z_meters": 2.22
+                },
+                "reason": "Crowd closest to the building door.",
+                "bbox_2d": [
+                    0,
+                    378,
+                    180,
+                    594
+                ],
+                "Physical_Height": 0.65,
+                "Physical_Width": 0.54,
+                "Top_Y_meters": 0.23,
+                "Bottom_Y_meters": 0.88
+            },
+            {
+                "name": "Crowd 2",
+                "point_2d": [
+                    240,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.44,
+                    "Y_meters": 1.09,
+                    "Z_meters": 5.39
+                },
+                "reason": "Crowd in the middle of the image.",
+                "bbox_2d": [
+                    180,
+                    378,
+                    300,
+                    594
+                ],
+                "Physical_Height": 1.57,
+                "Physical_Width": 0.87,
+                "Top_Y_meters": 0.57,
+                "Bottom_Y_meters": 2.13
+            },
+            {
+                "name": "Crowd 3",
+                "point_2d": [
+                    360,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.23,
+                    "Y_meters": 0.58,
+                    "Z_meters": 2.89
+                },
+                "reason": "Crowd to the right of the middle crowd.",
+                "bbox_2d": [
+                    300,
+                    378,
+                    420,
+                    594
+                ],
+                "Physical_Height": 0.84,
+                "Physical_Width": 0.47,
+                "Top_Y_meters": 0.3,
+                "Bottom_Y_meters": 1.14
+            },
+            {
+                "name": "Crowd 4",
+                "point_2d": [
+                    480,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.81,
+                    "Y_meters": 1.51,
+                    "Z_meters": 7.49
+                },
+                "reason": "Crowd farthest from the building door.",
+                "bbox_2d": [
+                    420,
+                    378,
+                    540,
+                    594
+                ],
+                "Physical_Height": 2.18,
+                "Physical_Width": 1.21,
+                "Top_Y_meters": 0.79,
+                "Bottom_Y_meters": 2.96
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Crowd 1' is SHORTER/SMALLER than 'Crowd 3'.\n- 'Crowd 3' is SHORTER/SMALLER than 'Crowd 2'.\n- 'Crowd 2' is SHORTER/SMALLER than 'Crowd 4'.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "29": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "student in blue shirt with long black strip",
+                "point_2d": [
+                    426,
+                    318
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.99,
+                    "Y_meters": 0.14,
+                    "Z_meters": 4.97
+                },
+                "reason": "The student in the blue shirt with long black strip is the target object.",
+                "anchor_parts": "both eyes",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "male student with a beard",
+                "point_2d": [
+                    492,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.76,
+                    "Y_meters": 0.06,
+                    "Z_meters": 5.78
+                },
+                "reason": "The male student with a beard is immediately to the left of the student in the blue shirt with long black strip.",
+                "anchor_parts": "both eyes",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "female student with long black hair",
+                "point_2d": [
+                    468,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.73,
+                    "Y_meters": 0.0,
+                    "Z_meters": 6.5
+                },
+                "reason": "The female student with long black hair is to the right of the student in the blue shirt with long black strip.",
+                "anchor_parts": "both eyes",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "female student with her head down",
+                "point_2d": [
+                    396,
+                    306
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.79,
+                    "Y_meters": 0.05,
+                    "Z_meters": 5.18
+                },
+                "reason": "The female student with her head down is to the left of the student in the blue shirt with long black strip.",
+                "anchor_parts": "both eyes",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [student in blue shirt with long black strip]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [male student with a beard]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [female student with long black hair]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [female student with her head down]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: student in blue shirt with long black strip is CLOSER to the camera than male student with a beard.\n- [Horizontal]: student in blue shirt with long black strip is to the LEFT of male student with a beard.\n- [Depth]: student in blue shirt with long black strip is CLOSER to the camera than female student with long black hair.\n- [Horizontal]: student in blue shirt with long black strip is to the LEFT of female student with long black hair.\n- [Depth]: student in blue shirt with long black strip is CLOSER to the camera than female student with her head down.\n- [Horizontal]: female student with her head down is to the LEFT of student in blue shirt with long black strip.\n- [Depth]: male student with a beard is CLOSER to the camera than female student with long black hair.\n- [Horizontal]: female student with long black hair is to the LEFT of male student with a beard.\n- [Depth]: female student with her head down is CLOSER to the camera than male student with a beard.\n- [Horizontal]: female student with her head down is to the LEFT of male student with a beard.\n- [Depth]: female student with her head down is CLOSER to the camera than female student with long black hair.\n- [Horizontal]: female student with her head down is to the LEFT of female student with long black hair.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'student in blue shirt with long black strip' and 'male student with a beard' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'student in blue shirt with long black strip' and 'female student with long black hair' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'student in blue shirt with long black strip' and 'female student with her head down' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'male student with a beard' and 'female student with long black hair' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'male student with a beard' and 'female student with her head down' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'female student with long black hair' and 'female student with her head down' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction."
+    },
+    "30": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "black car",
+                "point_2d": [
+                    240,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.18,
+                    "Y_meters": -0.18,
+                    "Z_meters": 2.99
+                },
+                "reason": "The black car is the main subject and is parked at an angle.",
+                "anchor_parts": "front and side doors",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "white car",
+                "point_2d": [
+                    480,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.92,
+                    "Y_meters": -0.77,
+                    "Z_meters": 5.04
+                },
+                "reason": "The white car is adjacent to the black car and provides context for the parking angle.",
+                "anchor_parts": "front and side doors",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "blue car",
+                "point_2d": [
+                    180,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.35,
+                    "Y_meters": -2.03,
+                    "Z_meters": 11.09
+                },
+                "reason": "The blue car is in the background and helps establish the parking lot setting.",
+                "anchor_parts": "front and side doors",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "building",
+                "point_2d": [
+                    240,
+                    30
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.39,
+                    "Y_meters": -6.27,
+                    "Z_meters": 22.83
+                },
+                "reason": "The building provides a background reference for the parking lot.",
+                "anchor_parts": "windows and wall",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "camera"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [black car]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [white car]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [blue car]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [building]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: black car is CLOSER to the camera than white car.\n- [Horizontal]: black car is to the LEFT of white car.\n- [Depth]: black car is CLOSER to the camera than blue car.\n- [Horizontal]: blue car is to the LEFT of black car.\n- [Depth]: black car is CLOSER to the camera than building.\n- [Horizontal]: building is to the LEFT of black car.\n- [Depth]: white car is CLOSER to the camera than blue car.\n- [Horizontal]: blue car is to the LEFT of white car.\n- [Depth]: white car is CLOSER to the camera than building.\n- [Horizontal]: building is to the LEFT of white car.\n- [Depth]: blue car is CLOSER to the camera than building.\n- [Horizontal]: building is to the LEFT of blue car.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Parallelism]: Both 'black car' and 'white car' present a strict 'side_profile'. Their longitudinal axes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Parallelism]: Both 'black car' and 'blue car' present a strict 'side_profile'. Their longitudinal axes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Perpendicularity]: 'black car' is 'side_profile' and 'building' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Parallelism]: Both 'white car' and 'blue car' present a strict 'side_profile'. Their longitudinal axes are PARALLEL.\n- [Relative Direction]: Both point 'left'. They are facing the SAME direction.\n- [Perpendicularity]: 'white car' is 'side_profile' and 'building' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Perpendicularity]: 'blue car' is 'side_profile' and 'building' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other."
+    },
+    "31": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "kettle",
+                "point_2d": [
+                    150,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.16,
+                    "Y_meters": 0.16,
+                    "Z_meters": 1.59
+                },
+                "reason": "The kettle is the main object in question for fitting other items.",
+                "bbox_2d": [
+                    0,
+                    294,
+                    306,
+                    588
+                ],
+                "Physical_Height": 0.31,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.01,
+                "Bottom_Y_meters": 0.31
+            },
+            {
+                "name": "bottle1",
+                "point_2d": [
+                    276,
+                    522
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.03,
+                    "Y_meters": 0.23,
+                    "Z_meters": 1.55
+                },
+                "reason": "One of the bottles on the bottom shelf.",
+                "bbox_2d": [
+                    246,
+                    456,
+                    312,
+                    588
+                ],
+                "Physical_Height": 0.14,
+                "Physical_Width": 0.07,
+                "Top_Y_meters": 0.16,
+                "Bottom_Y_meters": 0.3
+            },
+            {
+                "name": "bottle2",
+                "point_2d": [
+                    354,
+                    504
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.06,
+                    "Y_meters": 0.22,
+                    "Z_meters": 1.61
+                },
+                "reason": "Another bottle on the bottom shelf.",
+                "bbox_2d": [
+                    330,
+                    408,
+                    390,
+                    588
+                ],
+                "Physical_Height": 0.2,
+                "Physical_Width": 0.07,
+                "Top_Y_meters": 0.12,
+                "Bottom_Y_meters": 0.31
+            },
+            {
+                "name": "bottle3",
+                "point_2d": [
+                    432,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.13,
+                    "Y_meters": 0.15,
+                    "Z_meters": 1.48
+                },
+                "reason": "A larger bottle on the bottom shelf.",
+                "bbox_2d": [
+                    378,
+                    246,
+                    486,
+                    588
+                ],
+                "Physical_Height": 0.34,
+                "Physical_Width": 0.11,
+                "Top_Y_meters": -0.05,
+                "Bottom_Y_meters": 0.29
+            },
+            {
+                "name": "bottle4",
+                "point_2d": [
+                    534,
+                    468
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.24,
+                    "Y_meters": 0.17,
+                    "Z_meters": 1.52
+                },
+                "reason": "The largest bottle on the bottom shelf.",
+                "bbox_2d": [
+                    486,
+                    330,
+                    594,
+                    588
+                ],
+                "Physical_Height": 0.26,
+                "Physical_Width": 0.11,
+                "Top_Y_meters": 0.03,
+                "Bottom_Y_meters": 0.29
+            },
+            {
+                "name": "paper roll",
+                "point_2d": [
+                    360,
+                    60
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.07,
+                    "Y_meters": -0.29,
+                    "Z_meters": 1.8
+                },
+                "reason": "The cylindrical object on the top shelf.",
+                "bbox_2d": [
+                    204,
+                    0,
+                    516,
+                    126
+                ],
+                "Physical_Height": 0.15,
+                "Physical_Width": 0.38,
+                "Top_Y_meters": -0.36,
+                "Bottom_Y_meters": -0.21
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'bottle1' and 'paper roll' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'paper roll' is SHORTER/SMALLER than 'bottle2'.\n- 'bottle2' is SHORTER/SMALLER than 'bottle4'.\n- 'bottle4' is SHORTER/SMALLER than 'kettle'.\n- 'kettle' and 'bottle3' are of APPROXIMATELY SIMILAR HEIGHT.\n\n=== Horizontal Level Alignment ===\n- [Alignment]: The bases of 'kettle' and 'bottle1' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'kettle' and 'bottle2' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'kettle' and 'bottle3' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'kettle' and 'bottle4' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle1' and 'bottle2' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle1' and 'bottle3' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle1' and 'bottle4' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle2' and 'bottle3' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle2' and 'bottle4' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'bottle3' and 'bottle4' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "32": {
+        "task_route_used": "line0_pure_vlm",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "objects": [],
+        "spatial_relations_text": "Bypassed via Pure VLM.\n"
+    },
+    "33": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "couch",
+                "point_2d": [
+                    300,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -0.25,
+                    "Z_meters": 1.84
+                },
+                "reason": "The couch is the main object in the image and serves as the base for the other objects.",
+                "anchor_parts": "entire surface",
+                "visible_profile": "diagonal_front",
+                "2d_pointing_direction": "up"
+            },
+            {
+                "name": "pillow",
+                "point_2d": [
+                    270,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.16,
+                    "Y_meters": -0.82,
+                    "Z_meters": 2.47
+                },
+                "reason": "The pillow is on the couch and needs to be removed to reach the bottles.",
+                "anchor_parts": "entire surface",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "up"
+            },
+            {
+                "name": "books",
+                "point_2d": [
+                    348,
+                    138
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.26,
+                    "Y_meters": -0.87,
+                    "Z_meters": 2.42
+                },
+                "reason": "The books are on the couch and need to be removed to reach the bottles.",
+                "anchor_parts": "entire stack",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "up"
+            },
+            {
+                "name": "bottles",
+                "point_2d": [
+                    180,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.89,
+                    "Y_meters": -1.11,
+                    "Z_meters": 3.34
+                },
+                "reason": "The bottles are the target objects at the topmost corner.",
+                "anchor_parts": "entire stack",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "up"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [couch]: Presents a 'diagonal_front' view pointing 'up'. This indicates the object is ROTATED/ANGLED (oblique to the camera's line-of-sight).\n- [pillow]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [books]: Presents a 'frontal' view. It is aligned with the camera axis.\n- [bottles]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: couch is CLOSER to the camera than pillow.\n- [Horizontal]: pillow is to the LEFT of couch.\n- [Depth]: couch is CLOSER to the camera than books.\n- [Horizontal]: couch is to the LEFT of books.\n- [Depth]: couch is CLOSER to the camera than bottles.\n- [Horizontal]: bottles is to the LEFT of couch.\n- [Depth]: books is CLOSER to the camera than pillow.\n- [Horizontal]: pillow is to the LEFT of books.\n- [Depth]: pillow is CLOSER to the camera than bottles.\n- [Horizontal]: bottles is to the LEFT of pillow.\n- [Depth]: books is CLOSER to the camera than bottles.\n- [Horizontal]: bottles is to the LEFT of books.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction.\n- [Alignment/Rotation]: One is 'diagonal_front' and the other is 'frontal'. They are NOT PARALLEL; the diagonal object is ROTATED/ANGLED forming an oblique angle relative to the other.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction.\n- [Parallelism]: Both 'pillow' and 'books' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction.\n- [Parallelism]: Both 'pillow' and 'bottles' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction.\n- [Parallelism]: Both 'books' and 'bottles' present a 'frontal'/'frontal' view. Their front planes are PARALLEL.\n- [Relative Direction]: Both point 'up'. They are facing the SAME direction."
+    },
+    "34": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "stack of books and posters",
+                "point_2d": [
+                    303,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.01,
+                    "Y_meters": -0.07,
+                    "Z_meters": 4.15
+                },
+                "reason": "The stack of books and posters is being carried by the vendor on his back.",
+                "bbox_2d": [
+                    237,
+                    147,
+                    369,
+                    339
+                ],
+                "Physical_Height": 0.46,
+                "Physical_Width": 0.31,
+                "Top_Y_meters": -0.36,
+                "Bottom_Y_meters": 0.09
+            },
+            {
+                "name": "backpack",
+                "point_2d": [
+                    348,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.11,
+                    "Y_meters": 0.2,
+                    "Z_meters": 3.98
+                },
+                "reason": "The backpack is worn by the vendor and is visibly large.",
+                "bbox_2d": [
+                    279,
+                    243,
+                    423,
+                    525
+                ],
+                "Physical_Height": 0.64,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.13,
+                "Bottom_Y_meters": 0.51
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'stack of books and posters' is SHORTER/SMALLER than 'backpack'.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "35": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Student",
+                "point_2d": [
+                    384,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.31,
+                    "Y_meters": -0.33,
+                    "Z_meters": 8.9
+                },
+                "reason": "The student is the main subject in the image.",
+                "bbox_2d": [
+                    351,
+                    75,
+                    465,
+                    456
+                ],
+                "Physical_Height": 1.39,
+                "Physical_Width": 0.42,
+                "Top_Y_meters": -0.82,
+                "Bottom_Y_meters": 0.57
+            },
+            {
+                "name": "Door",
+                "point_2d": [
+                    75,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.41,
+                    "Y_meters": 0.0,
+                    "Z_meters": 4.42
+                },
+                "reason": "The door is on the left side of the image, and the student is facing towards it.",
+                "bbox_2d": [
+                    0,
+                    36,
+                    153,
+                    597
+                ],
+                "Physical_Height": 1.01,
+                "Physical_Width": 0.28,
+                "Top_Y_meters": -0.48,
+                "Bottom_Y_meters": 0.54
+            },
+            {
+                "name": "Window",
+                "point_2d": [
+                    492,
+                    42
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.56,
+                    "Y_meters": -2.1,
+                    "Z_meters": 19.89
+                },
+                "reason": "The window is visible on the right side of the image, but the student is not facing it.",
+                "bbox_2d": [
+                    420,
+                    0,
+                    564,
+                    84
+                ],
+                "Physical_Height": 0.68,
+                "Physical_Width": 1.17,
+                "Top_Y_meters": -2.44,
+                "Bottom_Y_meters": -1.76
+            },
+            {
+                "name": "Notice board inside glass",
+                "point_2d": [
+                    492,
+                    42
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.56,
+                    "Y_meters": -2.1,
+                    "Z_meters": 19.89
+                },
+                "reason": "The notice board is inside the window, but the student is not facing it.",
+                "bbox_2d": [
+                    420,
+                    0,
+                    564,
+                    84
+                ],
+                "Physical_Height": 0.68,
+                "Physical_Width": 1.17,
+                "Top_Y_meters": -2.44,
+                "Bottom_Y_meters": -1.76
+            },
+            {
+                "name": "Locker",
+                "point_2d": [
+                    297,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.02,
+                    "Y_meters": -0.56,
+                    "Z_meters": 15.13
+                },
+                "reason": "The lockers are on the right side of the image, but the student is not facing them.",
+                "bbox_2d": [
+                    258,
+                    0,
+                    336,
+                    330
+                ],
+                "Physical_Height": 2.04,
+                "Physical_Width": 0.48,
+                "Top_Y_meters": -1.86,
+                "Bottom_Y_meters": 0.19
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Window' and 'Notice board inside glass' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Notice board inside glass' is SHORTER/SMALLER than 'Door'.\n- 'Door' is SHORTER/SMALLER than 'Student'.\n- 'Student' is SHORTER/SMALLER than 'Locker'.\n\n=== Horizontal Level Alignment ===\n- [Alignment]: The bases of 'Student' and 'Door' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n- [Alignment]: The bases of 'Window' and 'Notice board inside glass' are ALIGNED ON THE SAME HORIZONTAL LEVEL.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "36": {
+        "task_route_used": "line1_base",
+        "controller_reason": "The question involves spatial reasoning about orientation and positioning, which aligns with the capabilities of line2_orientation. | repaired_by_hard_patterns: line2_orientation->line1_base",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "pillar_1",
+                "point_2d": [
+                    90,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.55,
+                    "Y_meters": -0.08,
+                    "Z_meters": 5.1
+                },
+                "reason": "The first pillar on the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "pillar_2",
+                "point_2d": [
+                    240,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.32,
+                    "Y_meters": 0.16,
+                    "Z_meters": 10.55
+                },
+                "reason": "The second pillar from the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "pillar_3",
+                "point_2d": [
+                    330,
+                    348
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.21,
+                    "Y_meters": 0.34,
+                    "Z_meters": 13.95
+                },
+                "reason": "The third pillar from the left side of the image.",
+                "facing_direction": "N/A"
+            },
+            {
+                "name": "person_with_backpack",
+                "point_2d": [
+                    372,
+                    432
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.53,
+                    "Y_meters": 0.97,
+                    "Z_meters": 14.28
+                },
+                "reason": "The person standing at the end with a backpack and white shirt.",
+                "facing_direction": "facing left"
+            }
+        ],
+        "spatial_relations_text": ""
+    },
+    "37": {
+        "task_route_used": "line3_bbox",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "whiteboard",
+                "point_2d": [
+                    144,
+                    156
+                ],
+                "global_3d_position": {
+                    "X_meters": -3.2,
+                    "Y_meters": -2.96,
+                    "Z_meters": 8.97
+                },
+                "reason": "The whiteboard is visible on the wall behind the students.",
+                "bbox_2d": [
+                    84,
+                    108,
+                    204,
+                    198
+                ],
+                "Physical_Height": 1.85,
+                "Physical_Width": 2.46,
+                "Top_Y_meters": -3.94,
+                "Bottom_Y_meters": -2.09
+            },
+            {
+                "name": "door",
+                "point_2d": [
+                    276,
+                    162
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.65,
+                    "Y_meters": -3.73,
+                    "Z_meters": 11.81
+                },
+                "reason": "The door is visible behind the students, next to the whiteboard.",
+                "bbox_2d": [
+                    222,
+                    126,
+                    330,
+                    198
+                ],
+                "Physical_Height": 1.95,
+                "Physical_Width": 2.92,
+                "Top_Y_meters": -4.7,
+                "Bottom_Y_meters": -2.76
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'whiteboard' and 'door' are of APPROXIMATELY SIMILAR HEIGHT.\n\n=== Horizontal Level Alignment ===\n- No objects are aligned on the exact same horizontal level.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected among the extracted objects."
+    },
+    "38": {
+        "task_route_used": "line2_orientation",
+        "controller_reason": "Assigned by hard-routing-inspired lexical patterns.",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Stack of books",
+                "point_2d": [
+                    120,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.12,
+                    "Y_meters": -0.04,
+                    "Z_meters": 0.45
+                },
+                "reason": "The stack of books is behind the front layer of the bookstack and is partially hidden by the white divider.",
+                "anchor_parts": "spines and covers",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Green book",
+                "point_2d": [
+                    360,
+                    108
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.06,
+                    "Y_meters": -0.19,
+                    "Z_meters": 0.66
+                },
+                "reason": "The green book is visible behind the white divider and is partially hidden by the front layer of the bookstack.",
+                "anchor_parts": "cover",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Stack of books]: Presents a strict 'side_profile' view pointing 'left'. This indicates it is positioned laterally (side-ways).\n- [Green book]: Presents a 'frontal' view. It is aligned with the camera axis.\n\n=== Absolute Spatial Relationships (Camera Perspective) ===\n- [Depth]: Stack of books is CLOSER to the camera than Green book.\n- [Horizontal]: Stack of books is to the LEFT of Green book.\n\n=== Pairwise Geometric & Orientation Deductions ===\n- [Perpendicularity]: 'Stack of books' is 'side_profile' and 'Green book' is 'frontal'. This strict geometric discrepancy dictates they are PERPENDICULAR (at ~90-degree angle) to each other.\n- [Relative Direction]: 'Stack of books' points 'left' while 'Green book' points 'right'. They are pointing in OPPOSITE / DIVERGING directions."
+    },
+    "40": {
+        "task_route_used": "line1_base",
+        "controller_reason": "The question involves depth/occlusion reasoning. | repaired_by_hard_patterns: line2_orientation->line1_base",
+        "predicted_knowledge_tags": [],
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Standing group",
+                "point_2d": [
+                    330,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.79,
+                    "Y_meters": 0.0,
+                    "Z_meters": 18.97
+                },
+                "reason": "The standing group is positioned between the sitters and the trees, and they are not the stage.",
+                "facing_direction": "facing stage"
+            },
+            {
+                "name": "Blanket group",
+                "point_2d": [
+                    270,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.21,
+                    "Y_meters": 1.05,
+                    "Z_meters": 5.06
+                },
+                "reason": "The blanket group is sitting on blankets, which places them in front of the standing group and behind the trees.",
+                "facing_direction": "facing stage"
+            },
+            {
+                "name": "Stage",
+                "point_2d": [
+                    288,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.4,
+                    "Y_meters": -2.01,
+                    "Z_meters": 24.24
+                },
+                "reason": "The stage is the focal point of the image and is positioned behind the standing group.",
+                "facing_direction": "facing audience"
+            },
+            {
+                "name": "Tree",
+                "point_2d": [
+                    540,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.34,
+                    "Y_meters": -0.67,
+                    "Z_meters": 4.04
+                },
+                "reason": "The tree is in the background, behind the standing group.",
+                "facing_direction": "N/A"
+            }
+        ],
+        "spatial_relations_text": ""
+    }
+}
