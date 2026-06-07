@@ -1,0 +1,1174 @@
+{
+    "41": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "kitchen island",
+                "point_2d": [
+                    330,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.12,
+                    "Y_meters": 0.36,
+                    "Z_meters": 2.56
+                },
+                "reason": "The kitchen island is positioned closer to the camera and further from the open doorway.",
+                "anchor_parts": "entire structure",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "shelves",
+                "point_2d": [
+                    270,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.2,
+                    "Y_meters": -0.6,
+                    "Z_meters": 4.34
+                },
+                "reason": "The shelves are positioned closer to the open doorway and closer to the camera than the kitchen island.",
+                "anchor_parts": "entire structure",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [kitchen island]: Presents a 'frontal' view.\n- [shelves]: Presents a 'frontal' view.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'shelves'\n- Closest to the LEFT edge: 'shelves'\n- Closest to the TOP-LEFT corner: 'shelves'\n- Closest to the CENTER of the object cluster: 'shelves'\n  * 'kitchen island' is at 2D Pixel [X:330, Y:390]\n  * 'shelves' is at 2D Pixel [X:270, Y:210]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'kitchen island' and 'shelves': 2.05 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "53": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Cheetah",
+                "point_2d": [
+                    252,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.04,
+                    "Y_meters": -0.07,
+                    "Z_meters": 7.02
+                },
+                "reason": "The cheetah cub is the main subject and is clearly visible in the foreground.",
+                "anchor_parts": "both eyes",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "camera"
+            },
+            {
+                "name": "Tail",
+                "point_2d": [
+                    450,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.26,
+                    "Y_meters": -0.05,
+                    "Z_meters": 16.26
+                },
+                "reason": "The tail is prominently visible and close to the cheetah cub's head.",
+                "anchor_parts": "tip of tail",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Background",
+                "point_2d": [
+                    150,
+                    90
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": -0.16,
+                    "Z_meters": 7.05
+                },
+                "reason": "The background is out of focus and provides context but is not in proximity to the cheetah cub's head.",
+                "anchor_parts": "blurry vegetation",
+                "visible_profile": "unknown",
+                "2d_pointing_direction": "unknown"
+            },
+            {
+                "name": "Grass",
+                "point_2d": [
+                    30,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.46,
+                    "Y_meters": -0.05,
+                    "Z_meters": 16.04
+                },
+                "reason": "The grass is visible in the background and is not in proximity to the cheetah cub's head.",
+                "anchor_parts": "blurred blades",
+                "visible_profile": "unknown",
+                "2d_pointing_direction": "unknown"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Cheetah]: Presents a 'frontal' view.\n- [Tail]: Presents a strict 'side_profile' view pointing 'left'.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'Background'\n- Closest to the LEFT edge: 'Grass'\n- Closest to the TOP-LEFT corner: 'Background'\n- Closest to the CENTER of the object cluster: 'Cheetah'\n  * 'Cheetah' is at 2D Pixel [X:252, Y:210]\n  * 'Tail' is at 2D Pixel [X:450, Y:270]\n  * 'Background' is at 2D Pixel [X:150, Y:90]\n  * 'Grass' is at 2D Pixel [X:30, Y:270]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'Cheetah' and 'Background': 0.12 meters\n- Distance between 'Tail' and 'Grass': 0.75 meters\n- Distance between 'Background' and 'Grass': 9.00 meters\n- Distance between 'Cheetah' and 'Grass': 9.03 meters\n- Distance between 'Tail' and 'Background': 9.22 meters\n- Distance between 'Cheetah' and 'Tail': 9.24 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "316": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "central plate",
+                "point_2d": [
+                    252,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.06,
+                    "Y_meters": -0.04,
+                    "Z_meters": 1.41
+                },
+                "reason": "The central plate is the main focus of the image and is placed in the center.",
+                "anchor_parts": "top and bottom edges",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "unknown"
+            },
+            {
+                "name": "onion",
+                "point_2d": [
+                    30,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.32,
+                    "Y_meters": 0.04,
+                    "Z_meters": 1.41
+                },
+                "reason": "The bowl of chopped onions is located to the left of the central plate.",
+                "anchor_parts": "top and bottom edges",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "green sauce",
+                "point_2d": [
+                    450,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.19,
+                    "Y_meters": -0.11,
+                    "Z_meters": 1.52
+                },
+                "reason": "The bowl of green sauce is located to the right of the central plate.",
+                "anchor_parts": "top and bottom edges",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            },
+            {
+                "name": "red sauce",
+                "point_2d": [
+                    60,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.29,
+                    "Y_meters": -0.18,
+                    "Z_meters": 1.42
+                },
+                "reason": "The bowl of red sauce is located to the top left of the central plate.",
+                "anchor_parts": "top and bottom edges",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "bombay mix",
+                "point_2d": [
+                    510,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.25,
+                    "Y_meters": 0.0,
+                    "Z_meters": 1.45
+                },
+                "reason": "The bowl of Bombay mix is located to the right of the central plate.",
+                "anchor_parts": "top and bottom edges",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "right"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [central plate]: Presents a 'frontal' view.\n- [onion]: Presents a 'frontal' view.\n- [green sauce]: Presents a 'frontal' view.\n- [red sauce]: Presents a 'frontal' view.\n- [bombay mix]: Presents a 'frontal' view.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'red sauce'\n- Closest to the LEFT edge: 'onion'\n- Closest to the TOP-LEFT corner: 'red sauce'\n- Closest to the CENTER of the object cluster: 'central plate'\n  * 'central plate' is at 2D Pixel [X:252, Y:270]\n  * 'onion' is at 2D Pixel [X:30, Y:330]\n  * 'green sauce' is at 2D Pixel [X:450, Y:210]\n  * 'red sauce' is at 2D Pixel [X:60, Y:150]\n  * 'bombay mix' is at 2D Pixel [X:510, Y:300]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'green sauce' and 'bombay mix': 0.14 meters\n- Distance between 'onion' and 'red sauce': 0.22 meters\n- Distance between 'central plate' and 'red sauce': 0.27 meters\n- Distance between 'central plate' and 'onion': 0.27 meters\n- Distance between 'central plate' and 'green sauce': 0.28 meters\n- Distance between 'central plate' and 'bombay mix': 0.32 meters\n- Distance between 'green sauce' and 'red sauce': 0.50 meters\n- Distance between 'onion' and 'green sauce': 0.54 meters\n- Distance between 'red sauce' and 'bombay mix': 0.57 meters\n- Distance between 'onion' and 'bombay mix': 0.57 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "397": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "yellow cup",
+                "point_2d": [
+                    90,
+                    60
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.12,
+                    "Y_meters": -0.13,
+                    "Z_meters": 0.58
+                },
+                "reason": "The yellow cup is the leftmost stack and its topmost cup is closest to the top of the image.",
+                "anchor_parts": "top and bottom rims",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            },
+            {
+                "name": "peach cup",
+                "point_2d": [
+                    270,
+                    30
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.02,
+                    "Y_meters": -0.15,
+                    "Z_meters": 0.59
+                },
+                "reason": "The peach cup is the middle stack and its topmost cup is closest to the top of the image.",
+                "anchor_parts": "top and bottom rims",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            },
+            {
+                "name": "pink cup",
+                "point_2d": [
+                    450,
+                    30
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.09,
+                    "Y_meters": -0.15,
+                    "Z_meters": 0.6
+                },
+                "reason": "The pink cup is the rightmost stack and its topmost cup is closest to the top of the image.",
+                "anchor_parts": "top and bottom rims",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "down"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [yellow cup]: Presents a 'frontal' view.\n- [peach cup]: Presents a 'frontal' view.\n- [pink cup]: Presents a 'frontal' view.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'peach cup'\n- Closest to the LEFT edge: 'yellow cup'\n- Closest to the TOP-LEFT corner: 'yellow cup'\n- Closest to the CENTER of the object cluster: 'peach cup'\n  * 'yellow cup' is at 2D Pixel [X:90, Y:60]\n  * 'peach cup' is at 2D Pixel [X:270, Y:30]\n  * 'pink cup' is at 2D Pixel [X:450, Y:30]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'yellow cup' and 'peach cup': 0.10 meters\n- Distance between 'peach cup' and 'pink cup': 0.11 meters\n- Distance between 'yellow cup' and 'pink cup': 0.21 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "708": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Peach clothing",
+                "point_2d": [
+                    60,
+                    180
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.29,
+                    "Y_meters": -0.15,
+                    "Z_meters": 1.06
+                },
+                "reason": "The peach-colored clothing is closest to the top left corner of the box.",
+                "anchor_parts": "visible fabric",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Pink clothing",
+                "point_2d": [
+                    90,
+                    120
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.26,
+                    "Y_meters": -0.22,
+                    "Z_meters": 1.05
+                },
+                "reason": "The pink clothing is also near the top left corner but slightly further than the peach clothing.",
+                "anchor_parts": "visible fabric",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Blue clothing",
+                "point_2d": [
+                    240,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.07,
+                    "Y_meters": 0.0,
+                    "Z_meters": 0.94
+                },
+                "reason": "The blue clothing is further from the top left corner compared to peach and pink.",
+                "anchor_parts": "visible fabric",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Chocolate clothing",
+                "point_2d": [
+                    30,
+                    240
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.33,
+                    "Y_meters": -0.07,
+                    "Z_meters": 1.04
+                },
+                "reason": "The chocolate-colored clothing is near the top left corner but not as close as the peach clothing.",
+                "anchor_parts": "visible fabric",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "left"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Peach clothing]: Presents a 'frontal' view.\n- [Pink clothing]: Presents a 'frontal' view.\n- [Blue clothing]: Presents a 'frontal' view.\n- [Chocolate clothing]: Presents a 'frontal' view.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'Pink clothing'\n- Closest to the LEFT edge: 'Chocolate clothing'\n- Closest to the TOP-LEFT corner: 'Pink clothing'\n- Closest to the CENTER of the object cluster: 'Pink clothing'\n  * 'Peach clothing' is at 2D Pixel [X:60, Y:180]\n  * 'Pink clothing' is at 2D Pixel [X:90, Y:120]\n  * 'Blue clothing' is at 2D Pixel [X:240, Y:300]\n  * 'Chocolate clothing' is at 2D Pixel [X:30, Y:240]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'Peach clothing' and 'Pink clothing': 0.08 meters\n- Distance between 'Peach clothing' and 'Chocolate clothing': 0.09 meters\n- Distance between 'Pink clothing' and 'Chocolate clothing': 0.17 meters\n- Distance between 'Blue clothing' and 'Chocolate clothing': 0.29 meters\n- Distance between 'Peach clothing' and 'Blue clothing': 0.29 meters\n- Distance between 'Pink clothing' and 'Blue clothing': 0.31 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "781": {
+        "task_route_used": "line2_orientation",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Branch",
+                "point_2d": [
+                    252,
+                    372
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": 0.17,
+                    "Z_meters": 18.92
+                },
+                "reason": "The branch is a solid object with a clear point on its surface.",
+                "anchor_parts": "branch and lichen",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Bird",
+                "point_2d": [
+                    252,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.11,
+                    "Y_meters": -0.07,
+                    "Z_meters": 18.09
+                },
+                "reason": "The bird is a solid object with a clear point on its surface.",
+                "anchor_parts": "head and body",
+                "visible_profile": "side_profile",
+                "2d_pointing_direction": "left"
+            },
+            {
+                "name": "Trees",
+                "point_2d": [
+                    150,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": -17.48,
+                    "Y_meters": 3.5,
+                    "Z_meters": 929.56
+                },
+                "reason": "The trees are a solid object with a clear point on their foliage.",
+                "anchor_parts": "green foliage",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "unknown"
+            },
+            {
+                "name": "Sky",
+                "point_2d": [
+                    300,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -7.33,
+                    "Z_meters": 389.74
+                },
+                "reason": "The sky is a solid object with a clear point on its surface.",
+                "anchor_parts": "sky and clouds",
+                "visible_profile": "frontal",
+                "2d_pointing_direction": "unknown"
+            }
+        ],
+        "spatial_relations_text": "=== Single Object Geometric States ===\n- [Branch]: Presents a strict 'side_profile' view pointing 'left'.\n- [Bird]: Presents a strict 'side_profile' view pointing 'left'.\n- [Trees]: Presents a 'frontal' view.\n- [Sky]: Presents a 'frontal' view.\n\n=== 2D Image Frame Positioning (Pixels: 0,0 is Top-Left) ===\n- Closest to the TOP edge: 'Sky'\n- Closest to the LEFT edge: 'Trees'\n- Closest to the TOP-LEFT corner: 'Sky'\n- Closest to the CENTER of the object cluster: 'Bird'\n  * 'Branch' is at 2D Pixel [X:252, Y:372]\n  * 'Bird' is at 2D Pixel [X:252, Y:270]\n  * 'Trees' is at 2D Pixel [X:150, Y:330]\n  * 'Sky' is at 2D Pixel [X:300, Y:150]\n\n=== 3D Physical Distances (Meters) ===\n- Distance between 'Branch' and 'Bird': 0.86 meters\n- Distance between 'Branch' and 'Sky': 370.90 meters\n- Distance between 'Bird' and 'Sky': 371.72 meters\n- Distance between 'Trees' and 'Sky': 540.21 meters\n- Distance between 'Branch' and 'Trees': 910.81 meters\n- Distance between 'Bird' and 'Trees': 911.64 meters\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Proximity Gradients) ---\n- Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).\n- When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.\n- When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.\n- In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.\n- The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+    },
+    "806": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Drying rack",
+                "point_2d": [
+                    90,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.33,
+                    "Y_meters": 0.24,
+                    "Z_meters": 1.5
+                },
+                "reason": "The drying rack is visible on the left side of the image.",
+                "bbox_2d": [
+                    0,
+                    312,
+                    186,
+                    594
+                ],
+                "Physical_Height": 0.44,
+                "Physical_Width": 0.29,
+                "Top_Y_meters": 0.02,
+                "Bottom_Y_meters": 0.46
+            },
+            {
+                "name": "Mugs",
+                "point_2d": [
+                    60,
+                    510
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.35,
+                    "Y_meters": 0.3,
+                    "Z_meters": 1.38
+                },
+                "reason": "The mugs are hanging on the drying rack.",
+                "bbox_2d": [
+                    0,
+                    444,
+                    132,
+                    594
+                ],
+                "Physical_Height": 0.22,
+                "Physical_Width": 0.19,
+                "Top_Y_meters": 0.21,
+                "Bottom_Y_meters": 0.42
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Mugs' is SHORTER/SMALLER than 'Drying rack'.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- Not enough objects to determine a global visual line pattern.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    },
+    "878": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "plate_1",
+                "point_2d": [
+                    306,
+                    36
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -0.13,
+                    "Z_meters": 0.48
+                },
+                "reason": "Topmost plate in the stack.",
+                "bbox_2d": [
+                    114,
+                    6,
+                    498,
+                    72
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.2,
+                "Top_Y_meters": -0.15,
+                "Bottom_Y_meters": -0.12
+            },
+            {
+                "name": "plate_2",
+                "point_2d": [
+                    348,
+                    96
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.02,
+                    "Y_meters": -0.1,
+                    "Z_meters": 0.48
+                },
+                "reason": "Second plate from the top.",
+                "bbox_2d": [
+                    162,
+                    72,
+                    534,
+                    126
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.19,
+                "Top_Y_meters": -0.12,
+                "Bottom_Y_meters": -0.09
+            },
+            {
+                "name": "plate_3",
+                "point_2d": [
+                    372,
+                    150
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.04,
+                    "Y_meters": -0.08,
+                    "Z_meters": 0.49
+                },
+                "reason": "Third plate from the top.",
+                "bbox_2d": [
+                    192,
+                    132,
+                    546,
+                    186
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.18,
+                "Top_Y_meters": -0.09,
+                "Bottom_Y_meters": -0.06
+            },
+            {
+                "name": "plate_4",
+                "point_2d": [
+                    390,
+                    210
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.05,
+                    "Y_meters": -0.05,
+                    "Z_meters": 0.48
+                },
+                "reason": "Fourth plate from the top.",
+                "bbox_2d": [
+                    210,
+                    192,
+                    552,
+                    246
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.18,
+                "Top_Y_meters": -0.06,
+                "Bottom_Y_meters": -0.03
+            },
+            {
+                "name": "plate_5",
+                "point_2d": [
+                    402,
+                    270
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.05,
+                    "Y_meters": -0.02,
+                    "Z_meters": 0.48
+                },
+                "reason": "Fifth plate from the top.",
+                "bbox_2d": [
+                    222,
+                    252,
+                    552,
+                    306
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.17,
+                "Top_Y_meters": -0.02,
+                "Bottom_Y_meters": 0.0
+            },
+            {
+                "name": "plate_6",
+                "point_2d": [
+                    408,
+                    330
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.06,
+                    "Y_meters": 0.02,
+                    "Z_meters": 0.49
+                },
+                "reason": "Sixth plate from the top.",
+                "bbox_2d": [
+                    228,
+                    312,
+                    540,
+                    366
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.16,
+                "Top_Y_meters": 0.01,
+                "Bottom_Y_meters": 0.03
+            },
+            {
+                "name": "plate_7",
+                "point_2d": [
+                    324,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.01,
+                    "Y_meters": 0.05,
+                    "Z_meters": 0.51
+                },
+                "reason": "Seventh plate from the top.",
+                "bbox_2d": [
+                    162,
+                    372,
+                    492,
+                    432
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.18,
+                "Top_Y_meters": 0.04,
+                "Bottom_Y_meters": 0.07
+            },
+            {
+                "name": "plate_8",
+                "point_2d": [
+                    300,
+                    450
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.08,
+                    "Z_meters": 0.52
+                },
+                "reason": "Eighth plate from the top.",
+                "bbox_2d": [
+                    138,
+                    432,
+                    468,
+                    492
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.18,
+                "Top_Y_meters": 0.07,
+                "Bottom_Y_meters": 0.11
+            },
+            {
+                "name": "plate_9",
+                "point_2d": [
+                    282,
+                    510
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.01,
+                    "Y_meters": 0.1,
+                    "Z_meters": 0.46
+                },
+                "reason": "Ninth plate from the top.",
+                "bbox_2d": [
+                    120,
+                    492,
+                    450,
+                    552
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.16,
+                "Top_Y_meters": 0.09,
+                "Bottom_Y_meters": 0.12
+            },
+            {
+                "name": "plate_10",
+                "point_2d": [
+                    270,
+                    570
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.02,
+                    "Y_meters": 0.15,
+                    "Z_meters": 0.54
+                },
+                "reason": "Bottommost plate in the stack.",
+                "bbox_2d": [
+                    108,
+                    552,
+                    432,
+                    599
+                ],
+                "Physical_Height": 0.03,
+                "Physical_Width": 0.19,
+                "Top_Y_meters": 0.14,
+                "Bottom_Y_meters": 0.17
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'plate_1' and 'plate_2' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_2' and 'plate_3' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_3' and 'plate_4' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_4' and 'plate_5' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_5' and 'plate_6' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_6' and 'plate_7' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_7' and 'plate_8' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_8' and 'plate_9' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'plate_9' and 'plate_10' are of APPROXIMATELY SIMILAR HEIGHT.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- [Visual Pattern]: The objects are SCATTERED and do not form a single straight line.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    },
+    "910": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "ren",
+                "point_2d": [
+                    300,
+                    138
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": -0.23,
+                    "Z_meters": 2.21
+                },
+                "reason": "The 'ren' bottle is positioned in the upper middle section of the image.",
+                "bbox_2d": [
+                    276,
+                    60,
+                    336,
+                    216
+                ],
+                "Physical_Height": 0.22,
+                "Physical_Width": 0.09,
+                "Top_Y_meters": -0.34,
+                "Bottom_Y_meters": -0.12
+            },
+            {
+                "name": "medik8",
+                "point_2d": [
+                    276,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.03,
+                    "Y_meters": 0.0,
+                    "Z_meters": 1.96
+                },
+                "reason": "The 'medik8' bottle is located in the middle section of the image, slightly to the left.",
+                "bbox_2d": [
+                    258,
+                    246,
+                    300,
+                    348
+                ],
+                "Physical_Height": 0.13,
+                "Physical_Width": 0.05,
+                "Top_Y_meters": -0.07,
+                "Bottom_Y_meters": 0.06
+            },
+            {
+                "name": "honest",
+                "point_2d": [
+                    462,
+                    288
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.21,
+                    "Y_meters": -0.02,
+                    "Z_meters": 1.98
+                },
+                "reason": "The 'honest' bottle is positioned in the right middle section of the image.",
+                "bbox_2d": [
+                    426,
+                    234,
+                    504,
+                    348
+                ],
+                "Physical_Height": 0.15,
+                "Physical_Width": 0.1,
+                "Top_Y_meters": -0.08,
+                "Bottom_Y_meters": 0.06
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'medik8' is SHORTER/SMALLER than 'honest'.\n- 'honest' is SHORTER/SMALLER than 'ren'.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- [Visual Pattern]: The objects are SCATTERED and do not form a single straight line.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    },
+    "1005": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Electric pole 1",
+                "point_2d": [
+                    66,
+                    225
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.8,
+                    "Y_meters": -0.58,
+                    "Z_meters": 5.29
+                },
+                "reason": "The first electric pole is visible on the left side of the image.",
+                "bbox_2d": [
+                    45,
+                    75,
+                    87,
+                    375
+                ],
+                "Physical_Height": 2.31,
+                "Physical_Width": 0.32,
+                "Top_Y_meters": -1.73,
+                "Bottom_Y_meters": 0.58
+            },
+            {
+                "name": "Electric pole 2",
+                "point_2d": [
+                    273,
+                    225
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.7,
+                    "Y_meters": -1.96,
+                    "Z_meters": 17.91
+                },
+                "reason": "The second electric pole is visible in the center of the image.",
+                "bbox_2d": [
+                    219,
+                    15,
+                    327,
+                    375
+                ],
+                "Physical_Height": 9.39,
+                "Physical_Width": 2.82,
+                "Top_Y_meters": -7.43,
+                "Bottom_Y_meters": 1.96
+            },
+            {
+                "name": "Electric pole 3",
+                "point_2d": [
+                    306,
+                    225
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.1,
+                    "Y_meters": -1.28,
+                    "Z_meters": 11.72
+                },
+                "reason": "The third electric pole is visible on the right side of the image.",
+                "bbox_2d": [
+                    273,
+                    75,
+                    339,
+                    375
+                ],
+                "Physical_Height": 5.12,
+                "Physical_Width": 1.13,
+                "Top_Y_meters": -3.84,
+                "Bottom_Y_meters": 1.28
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Electric pole 1' is SHORTER/SMALLER than 'Electric pole 3'.\n- 'Electric pole 3' is SHORTER/SMALLER than 'Electric pole 2'.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- [Visual Pattern]: The objects are SCATTERED and do not form a single straight line.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'Electric pole 3' is IN FRONT OF and PARTIALLY OCCLUDES 'Electric pole 2'.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    },
+    "1261": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Person 1",
+                "point_2d": [
+                    24,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.35,
+                    "Y_meters": 0.32,
+                    "Z_meters": 4.24
+                },
+                "reason": "First person in the line from the left.",
+                "bbox_2d": [
+                    0,
+                    246,
+                    48,
+                    486
+                ],
+                "Physical_Height": 1.17,
+                "Physical_Width": 0.23,
+                "Top_Y_meters": -0.26,
+                "Bottom_Y_meters": 0.91
+            },
+            {
+                "name": "Person 2",
+                "point_2d": [
+                    78,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": -1.02,
+                    "Y_meters": 0.3,
+                    "Z_meters": 3.99
+                },
+                "reason": "Second person in the line from the left.",
+                "bbox_2d": [
+                    48,
+                    246,
+                    114,
+                    486
+                ],
+                "Physical_Height": 1.1,
+                "Physical_Width": 0.3,
+                "Top_Y_meters": -0.25,
+                "Bottom_Y_meters": 0.86
+            },
+            {
+                "name": "Person 3",
+                "point_2d": [
+                    150,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.75,
+                    "Y_meters": 0.33,
+                    "Z_meters": 4.35
+                },
+                "reason": "Third person in the line from the left.",
+                "bbox_2d": [
+                    114,
+                    246,
+                    186,
+                    486
+                ],
+                "Physical_Height": 1.2,
+                "Physical_Width": 0.36,
+                "Top_Y_meters": -0.27,
+                "Bottom_Y_meters": 0.93
+            },
+            {
+                "name": "Person 4",
+                "point_2d": [
+                    216,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.37,
+                    "Y_meters": 0.29,
+                    "Z_meters": 3.85
+                },
+                "reason": "Fourth person in the line from the left.",
+                "bbox_2d": [
+                    186,
+                    246,
+                    252,
+                    486
+                ],
+                "Physical_Height": 1.06,
+                "Physical_Width": 0.29,
+                "Top_Y_meters": -0.24,
+                "Bottom_Y_meters": 0.82
+            },
+            {
+                "name": "Person 5",
+                "point_2d": [
+                    282,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.08,
+                    "Y_meters": 0.31,
+                    "Z_meters": 4.05
+                },
+                "reason": "Fifth person in the line from the left.",
+                "bbox_2d": [
+                    252,
+                    246,
+                    318,
+                    486
+                ],
+                "Physical_Height": 1.12,
+                "Physical_Width": 0.31,
+                "Top_Y_meters": -0.25,
+                "Bottom_Y_meters": 0.87
+            },
+            {
+                "name": "Person 6",
+                "point_2d": [
+                    348,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.2,
+                    "Y_meters": 0.28,
+                    "Z_meters": 3.64
+                },
+                "reason": "Sixth person in the line from the left.",
+                "bbox_2d": [
+                    318,
+                    246,
+                    384,
+                    486
+                ],
+                "Physical_Height": 1.01,
+                "Physical_Width": 0.28,
+                "Top_Y_meters": -0.23,
+                "Bottom_Y_meters": 0.78
+            },
+            {
+                "name": "Person 7",
+                "point_2d": [
+                    414,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.8,
+                    "Y_meters": 0.46,
+                    "Z_meters": 6.07
+                },
+                "reason": "Seventh person in the line from the left.",
+                "bbox_2d": [
+                    384,
+                    246,
+                    450,
+                    486
+                ],
+                "Physical_Height": 1.68,
+                "Physical_Width": 0.46,
+                "Top_Y_meters": -0.38,
+                "Bottom_Y_meters": 1.3
+            },
+            {
+                "name": "Person 8",
+                "point_2d": [
+                    480,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": 1.21,
+                    "Y_meters": 0.45,
+                    "Z_meters": 5.86
+                },
+                "reason": "Eighth person in the line from the left.",
+                "bbox_2d": [
+                    450,
+                    246,
+                    516,
+                    486
+                ],
+                "Physical_Height": 1.62,
+                "Physical_Width": 0.45,
+                "Top_Y_meters": -0.36,
+                "Bottom_Y_meters": 1.25
+            },
+            {
+                "name": "Person 9",
+                "point_2d": [
+                    546,
+                    366
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.96,
+                    "Y_meters": 0.26,
+                    "Z_meters": 3.39
+                },
+                "reason": "Ninth person in the line from the left.",
+                "bbox_2d": [
+                    516,
+                    246,
+                    582,
+                    486
+                ],
+                "Physical_Height": 0.94,
+                "Physical_Width": 0.26,
+                "Top_Y_meters": -0.21,
+                "Bottom_Y_meters": 0.73
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Person 9' and 'Person 6' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 6' and 'Person 4' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 4' and 'Person 2' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 2' and 'Person 5' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 5' and 'Person 1' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 1' and 'Person 3' are of APPROXIMATELY SIMILAR HEIGHT.\n- 'Person 3' is SHORTER/SMALLER than 'Person 8'.\n- 'Person 8' and 'Person 7' are of APPROXIMATELY SIMILAR HEIGHT.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- [Visual Pattern]: The objects are SCATTERED and do not form a single straight line.\n\n=== Occlusion & Depth Deductions ===\n- No significant occlusion detected.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    },
+    "1265": {
+        "task_route_used": "line3_bbox",
+        "target_perspective": "camera",
+        "objects": [
+            {
+                "name": "Tallest plant",
+                "point_2d": [
+                    405,
+                    300
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.13,
+                    "Y_meters": 0.0,
+                    "Z_meters": 2.23
+                },
+                "reason": "The tallest plant is identified to be excluded from the analysis.",
+                "bbox_2d": [
+                    276,
+                    102,
+                    540,
+                    480
+                ],
+                "Physical_Height": 0.48,
+                "Physical_Width": 0.33,
+                "Top_Y_meters": -0.25,
+                "Bottom_Y_meters": 0.23
+            },
+            {
+                "name": "Pink pot with green plant",
+                "point_2d": [
+                    132,
+                    456
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.12,
+                    "Y_meters": 0.11,
+                    "Z_meters": 1.29
+                },
+                "reason": "This pot is one of the remaining plants after excluding the tallest plant.",
+                "bbox_2d": [
+                    48,
+                    342,
+                    216,
+                    576
+                ],
+                "Physical_Height": 0.17,
+                "Physical_Width": 0.12,
+                "Top_Y_meters": 0.03,
+                "Bottom_Y_meters": 0.2
+            },
+            {
+                "name": "Green pot with leafy plant",
+                "point_2d": [
+                    249,
+                    390
+                ],
+                "global_3d_position": {
+                    "X_meters": -0.04,
+                    "Y_meters": 0.07,
+                    "Z_meters": 1.45
+                },
+                "reason": "This pot is one of the remaining plants after excluding the tallest plant.",
+                "bbox_2d": [
+                    168,
+                    150,
+                    330,
+                    510
+                ],
+                "Physical_Height": 0.29,
+                "Physical_Width": 0.13,
+                "Top_Y_meters": -0.12,
+                "Bottom_Y_meters": 0.17
+            },
+            {
+                "name": "Small gray pot with succulent",
+                "point_2d": [
+                    303,
+                    492
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.0,
+                    "Y_meters": 0.14,
+                    "Z_meters": 1.29
+                },
+                "reason": "This pot is one of the remaining plants after excluding the tallest plant.",
+                "bbox_2d": [
+                    258,
+                    408,
+                    348,
+                    576
+                ],
+                "Physical_Height": 0.12,
+                "Physical_Width": 0.07,
+                "Top_Y_meters": 0.08,
+                "Bottom_Y_meters": 0.2
+            },
+            {
+                "name": "Pink and blue pot with pink plant",
+                "point_2d": [
+                    471,
+                    480
+                ],
+                "global_3d_position": {
+                    "X_meters": 0.11,
+                    "Y_meters": 0.12,
+                    "Z_meters": 1.18
+                },
+                "reason": "This pot is one of the remaining plants after excluding the tallest plant.",
+                "bbox_2d": [
+                    390,
+                    372,
+                    552,
+                    576
+                ],
+                "Physical_Height": 0.14,
+                "Physical_Width": 0.11,
+                "Top_Y_meters": 0.05,
+                "Bottom_Y_meters": 0.18
+            }
+        ],
+        "spatial_relations_text": "=== Size & Height Deductions ===\n- 'Small gray pot with succulent' is SHORTER/SMALLER than 'Pink and blue pot with pink plant'.\n- 'Pink and blue pot with pink plant' is SHORTER/SMALLER than 'Pink pot with green plant'.\n- 'Pink pot with green plant' is SHORTER/SMALLER than 'Green pot with leafy plant'.\n- 'Green pot with leafy plant' is SHORTER/SMALLER than 'Tallest plant'.\n\n=== 2D Visual Alignment Patterns (Image Plane) ===\n- [Visual Pattern]: The objects are SCATTERED and do not form a single straight line.\n\n=== Occlusion & Depth Deductions ===\n- [Occlusion]: 'Green pot with leafy plant' is IN FRONT OF and PARTIALLY OCCLUDES 'Tallest plant'.\n- [Occlusion]: 'Small gray pot with succulent' is IN FRONT OF and PARTIALLY OCCLUDES 'Tallest plant'.\n- [Occlusion]: 'Pink and blue pot with pink plant' is IN FRONT OF and PARTIALLY OCCLUDES 'Tallest plant'.\n\n--- EXTERNAL DOMAIN KNOWLEDGE ---\n--- Domain Rules (Alignment Patterns) ---\n- Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.\n- Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.\n- Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+    }
+}
