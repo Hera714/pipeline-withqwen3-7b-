@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "description": "Pure knowledge injection for Orientation tasks. Each subclass is expressed as general declarative knowledge rather than heuristics or procedural rules.",
+    "version": "v3.0"
+  },
+  "Tool Handedness": [
+    "The Handle Orientation Rule: If the handle of a tool (such as a spoon, pan, or mop) is pointing to or positioned on the LEFT side of the user's perspective or a reference object, it is ergonomically optimized to be picked up with the LEFT hand. If positioned on the RIGHT, it favors the RIGHT hand.",
+    "The Precision vs. Gross Motor Rule: A person's handedness (dominant hand) is most evident in actions requiring fine motor control and precision (e.g., scooping spice, writing, stirring, manipulating small objects). It is LEAST evident in gross motor actions, passive holding, or bilateral tasks (e.g., plugging a charger, placing a frame, simply holding a phone, or typing).",
+    "The Active Execution Rule: When interacting with an object like a kettle or a tool, the active execution movement (e.g., lifting, pouring, or scooping) is the primary indicator of handedness, rather than passive stabilization actions (e.g., merely holding the handle or placing a lid)."
+  ],
+  "Facing Direction": [
+    "The Elevation/Attention Rule: When individuals are described as looking at an elevated environmental feature, such as a fountain flowing from the top of rocks, or standing on a far bank looking across a deep space, their facial direction should strictly be classified as 'Upward' due to the upward gaze required.",
+    "The Wall-Mount Rule: A portrait, sign, or object hung on a wall that faces directly into the room is geometrically considered to be facing 'Away' from the wall itself.",
+    "The Stage Recording Rule: If a camera is set up on the side of a room (e.g., the left side) to record an event where the audience is facing forward toward a stage, the camera is typically facing 'Right' (or towards the center stage) to capture the profile of the event, rather than facing strictly forward."
+  ]
+
+}

@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "description": "Physical and spatial reasoning knowledge for 3D geometry tasks.",
+    "version": "v3.1",
+    "available_information": "2D bounding box (width, height) from image + estimated depth (distance from camera). Object thickness and volume are NOT available.",
+    "priority": "Visual evidence from image always takes precedence over injected knowledge."
+  },
+
+  "Stability Prediction": [
+    "Objects placed flat with their center of gravity within the effective base of support are stable by default.",
+    "Do not predict dramatic or chain-reaction collapses in everyday scenes unless there is clearly insufficient physical support, a steep incline, or a significant external force.",
+    "Perturbations where the agent's mass is less than 1% of the structure's mass (e.g., a bird landing, a raindrop) have no significant effect.",
+    "Perturbations where the agent's mass is greater than 10% of the structure's mass (e.g., a person climbing a light ladder) cause significant displacement or tipping.",
+    "Forces applied above an object's center of gravity tend to cause tipping, while forces applied below tend to cause sliding.",
+    "Precision-balanced structures (e.g., card houses, objects balanced on a point) are extremely vulnerable to minor vibrations, whereas anchored or heavy structures (e.g., lamp posts, trees, wall-mounted TVs) are unaffected by everyday light impacts.",
+"When determining the 'least stable' object, assess only the geometric ratio of the base of support relative to the height. Fragility does not equal instability.",
+    "On inclines, objects with curved contact surfaces (spheres, sideways cylinders) will roll at minor tilts of 1-2 degrees. Objects with flat bases rely on friction and typically remain stationary up to 5-15 degrees.",
+    "When an object is removed from an arrangement, only the objects that directly depend on it for support will fall. Objects with independent support remain unaffected.",
+    "When a person sits or jumps on heavy furniture (e.g., beds, sofas, benches), the furniture itself remains stable. Only loose, lightweight items on the surface (e.g., pillows, loose papers, unanchored blankets) will bounce or be displaced.",
+    "Humans possess active muscle reflexes to recover balance. They will not fall uncontrollably from minor obstacles or slight forces unless the environment is extremely steep or slippery."
+  ],
+  "Gravity Effects": [
+      "Dense, compact objects fall at similar speeds regardless of their specific shape; their exact impact times rely on specific environmental factors. Only lightweight, thin objects with high surface-area-to-mass ratios fall significantly slower due to air resistance.",
+      "Poured liquids always follow a curved (parabolic) downward trajectory and spread outward immediately upon impacting a surface.",
+      "Rolling strictly requires a curved contact patch with the surface. Objects with flat bases, irregular contact areas, or symmetry-breaking protrusions will not roll, regardless of their overall shape. Round objects roll continuously on slopes, but require an initial kinetic push to roll temporarily on flat surfaces.",
+      "Gravity alone does not break the equilibrium of a stable resting object; movement requires a specific external trigger (e.g., wind, bump, vibration).",
+      "When a supporting surface is tilted slowly and gradually, static friction keeps objects completely stationary until a specific angle threshold is exceeded.",
+      "Rapidly removing a bottom supporting object causes upper objects to drop vertically in place due to inertia. Slowly removing it causes the upper objects to slide or topple as support is gradually lost.",
+      "Buoyancy depends on overall average density. Objects with trapped internal air pockets will float, but physically altering the object to expose or remove those air pockets (e.g., by slicing or crushing) will cause it to sink.",
+      "Collisions involving either a rigid object hitting a soft/elastic surface, or an elastic object hitting a hard surface, will result in a bounce rather than a dead stop.",
+      "Wind-blown lightweight flexible materials (like fabric) do not float perfectly straight; they follow air currents and will wrap around or cling to physical obstacles in their path.",
+      "An obstacle's ability to stop a moving object depends entirely on their relative mass and speed. Light or small obstacles will not stop heavy or fast-moving objects and will simply be knocked aside.",
+      "Objects cannot balance or stand in orientations where their geometry and center of mass fail to form a stable equilibrium.",
+      "If the camera angle obscures the spatial relationship, trajectory path, or landing zone of a falling or moving object, the physical outcome must be evaluated as 'cannot be determined'.",
+      "Always assume the most direct, intuitive, and simple physical outcome for an action (e.g., gently pushed items slide, liquids spread) without over-analyzing for dramatic or extreme results."
+    ]
+
+}

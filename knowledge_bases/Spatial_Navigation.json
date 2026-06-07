@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "description": "General-purpose knowledge injection for improving Spatial Navigation reasoning in vision-language pipelines. The focus is on stable spatial priors, viewpoint-aware reasoning, accessibility constraints, obstacle interaction, and calibrated uncertainty. The knowledge is intentionally abstract and non-dataset-specific, with only lightweight examples used to illustrate principles.",
+    "version": "v2.0",
+    "design_principles": [
+      "Prefer geometry and affordance rules over memorized scene templates.",
+      "Separate observability, reachability, and traversability; they are related but not equivalent.",
+      "Use viewpoint transformation explicitly when questions ask from another agent's perspective.",
+      "Count only objects that causally constrain a path, line of sight, or access; ignore irrelevant scene items.",
+      "When evidence is insufficient, preserve uncertainty instead of hallucinating a definite route, destination, or visibility judgment.",
+      "Fuse metric cues with semantic priors: object type, human scale, door width, lane width, shelf accessibility, and obstacle passability."
+    ],
+    "priority_hierarchy": [
+      "1. Explicit scene geometry and relative layout",
+      "2. Occlusion and support/contact relations",
+      "3. Human/vehicle affordances and traversability constraints",
+      "4. Semantic world priors about typical usage of roads, doors, stairs, shelves, walkways, and seating",
+      "5. Calibrated uncertainty when the scene does not support a unique answer"
+    ],
+    "knowledge_levels": {
+      "L1_geometry": "Relative left-right, front-back, near-far, same-lane, same-row, same-column, containment, adjacency, and ordering.",
+      "L2_visibility_access": "Line-of-sight, partial occlusion, reach envelopes, passage width, and whether an object blocks access or merely co-occurs nearby.",
+      "L3_affordance_dynamics": "Whether humans, vehicles, or manipulators can pass, cross, overtake, turn, climb, or access a target under realistic constraints.",
+      "L4_uncertainty_control": "When the image/map does not justify a unique claim, prefer maybe / cannot determine / lack of information."
+    }
+  },
+  "Viewpoint Visibility": [
+    "Visibility must always be evaluated from the queried observer's viewpoint, not from the camera's viewpoint. To decide what a seated person or a standing teacher can see, mentally reposition the viewpoint to that person's eye location and facing direction before checking line-of-sight.",
+    "An object that is present in the scene may still be not visible, only partially visible, or not clearly readable from a different viewpoint. Presence in the image does not guarantee visibility from every position within the scene.",
+    "Gaze direction of a person is primarily determined by head and torso orientation, not by proximity on the grid. The nearest object is not necessarily the one being looked at; the object aligned with the person's forward-facing axis is.",
+    "Occlusion is viewpoint-dependent and asymmetric: a smaller foreground object can partially hide a larger background object when they overlap along the viewing ray from the observer. Two objects side by side in the image plane do not occlude each other unless their projected extents actually overlap from the relevant viewpoint.",
+    "For questions about whether text on a sign, shop name, or board is clearly readable, consider the observer's distance, angle of incidence, and whether foreground clutter or structural elements intervene. A sign can be physically present yet unreadable from an oblique seated position.",
+    "Furniture such as benches, sofas, desks, and stadium seating imposes a natural facing direction. A person sitting on a bench typically faces the open or focal side. Use this prior to infer what they can or cannot see.",
+    "When counting fully visible people, an individual is fully visible only if no part of their body is materially clipped by the image boundary or occluded by another object. Partially cropped or overlapping figures should not be counted as fully visible.",
+    "Objects placed behind other objects of the same semantic category (e.g., a large vase behind a smaller vase) can still be partially hidden. Occlusion depends on spatial overlap in projection, not on category membership."
+  ],
+  "Accessibility Constraints": [
+    "Systematically count every distinct physical item blocking an access point. For grouped items or stacks, count each visually distinguishable unit separately. Do not stop at only the most salient objects.",
+    
+    "An access zone includes the entire physical footprint needed to approach, operate, and pass through an opening (e.g., a door's swing arc). Any object intersecting this extended zone is a blocker.",
+    
+    "A 'direct path' requires continuous, same-surface traversal. Solid physical dividers (e.g., medians, barriers, grade separations) block direct paths.",
+    
+    "To identify a specific obstructing object, trace a direct approach line to the target. The first object intersecting this line (including items protruding from above or below) is the primary obstructor.",
+    
+    "Human vertical reach is limited (~2.0-2.3m). Objects or surfaces above ground-level reach (e.g., high shelves, ceilings) are inaccessible without visual evidence of specialized equipment.",
+    
+    "Select the most specific, visually verifiable reason for inaccessibility (e.g., 'no visible stairs'). Avoid defaulting to compound answers like 'all of the above' unless every factor is independently confirmed.",
+    
+    "'Available' strictly means physically present, unoccupied, and usable. Occupied slots or seats count as zero availability.",
+    
+    "Evaluate obstructions for different directions or zones independently. Multiple areas can be obstructed simultaneously, so always verify compound options (e.g., 'both X and Y').",
+    
+    "In structured environments (e.g., aisles, marked lots), assume a path is accessible if no physical obstacles are visibly present. The absence of visible blockage means the path is clear.",
+    
+    "Limit a blocked zone strictly to the physical footprint of the obstructing object. Do not extrapolate a blockage to adjacent, unoccluded access points."
+  ]
+}

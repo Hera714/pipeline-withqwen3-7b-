@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "description": "Knowledge injection for Relative Positioning tasks in 3D spatial reasoning. Covers left-right, above-below, front-behind, proximity, multi-object ordering, and reference frame resolution.",
+    "version": "v2.0",
+    "design_principles": [
+      "Clarify reference frame conventions to prevent systematic direction errors",
+      "Leverage depth, occlusion, and perspective cues for robust 3D positioning",
+      "Encode commonsense priors about typical real-world spatial arrangements",
+      "Handle edge cases where 2D projections create misleading spatial impressions"
+    ],
+    "priority_hierarchy": [
+      "1. Establish consistent reference frames throughout reasoning",
+      "2. Use 3D coordinates over raw 2D pixel positions whenever available",
+      "3. Apply occlusion and perspective correction before claiming relative positions",
+      "4. Cross-validate spatial relations using multiple cues",
+      "5. Apply world priors only when geometric evidence is insufficient"
+    ]
+  },
+  "Proximity Gradients": [
+    "Positions described relative to the 'frame' or 'image boundaries', such as the center of the frame or the top of the image, refer exclusively to 2D Cartesian coordinates (X/Y axes) and must not be evaluated using 3D depth relative to the camera (Z axis).",
+    "When two objects differ simultaneously in their horizontal positioning and their depth relative to the camera, their spatial alignment relative to each other is strictly diagonal, regardless of whether their front planes are oriented parallel to the camera.",
+    "When assessing the closest or farthest depth of specific anatomical parts of a subject viewed in a side or diagonal profile, protruding extremities such as the nose, beak, or leading shoulder represent the extreme depth limits and supersede broader anatomical regions like the entire head or body.",
+    "In evaluating the greatest proximity to a specific subject, direct physical contact or visual overlap by foreground environmental elements, such as surrounding grass, leaves, or branches, often takes precedence over biologically attached body parts that are positioned further back in the 3D space.",
+    "The Euclidean distance between two objects within the scene cannot be accurately deduced merely by comparing their respective distances to the camera; objects sharing a direct structural baseline, such as being placed on the same table or identical shelving unit, possess greater proximity to each other than to isolated objects sharing a similar camera depth."
+  ],
+  "Alignment Patterns": [
+    "Alignment Mapping: If the text states the bases of multiple objects are 'ALIGNED ON THE SAME HORIZONTAL LEVEL', this implies they form a 'Row', their arrangement is 'Horizontal', and they 'Align with each other'.",
+    "Sorting & Counting: When asked for the 'second farthest' or a specific rank, explicitly list the depth relationships, sort them linearly from closest to farthest, and select the correct rank. When asked for distance in terms of the number of items, count the discrete objects horizontally between the targets.",
+    "Corner Proximity: To find an item closest to the 'bottom right corner', find the object that is simultaneously closest to the camera (Depth) and furthest to the right (Horizontal)."
+  ]
+  
+}

@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "description": "General-purpose knowledge injection for Size & Scale reasoning errors in visual spatial QA. The content is designed for pipeline stages that combine perception, depth estimation, 3D scene graph construction, and final VLM reasoning. It emphasizes transferable geometric knowledge, uncertainty-aware heuristics, and weak world priors rather than benchmark-specific answer patterns.",
+    "version": "v2.0",
+    "design_principles": [
+      "Prefer physically grounded explanations over lexical matching to answer options.",
+      "Separate apparent image size from inferred physical size and from affordance/capacity judgments.",
+      "Use depth, occlusion, truncation, and support relations as uncertainty signals rather than as direct evidence.",
+      "Inject weak but useful world priors only when geometric evidence is incomplete or noisy.",
+      "Favor comparative, monotonic rules over rigid numeric templates to avoid overfitting.",
+      "When multiple interpretations are possible, prefer the one consistent with both projective geometry and ordinary scene semantics."
+    ],
+    "priority_hierarchy": [
+      "1. Direct geometric evidence from visible extent, depth ordering, contact/support, and projection geometry.",
+      "2. Multi-object relational consistency across the scene graph.",
+      "3. Apparent-vs-physical-size correction using perspective and viewpoint reasoning.",
+      "4. Category-level world priors about typical object scale, capacity, and human interaction.",
+      "5. Linguistic disambiguation of option wording, especially for answers describing appearance rather than true size."
+    ],
+    "knowledge_levels": {
+      "principles": "High-level rules that should remain true across scenes and object categories.",
+      "heuristics": "Operational decision rules for noisy visual inputs, partial occlusion, imperfect depth, and ambiguous wording.",
+      "world_priors": "Weak common-sense expectations about real-world object scale, containment, carrying capacity, legibility, and human-environment fit."
+    }
+  },
+  "Relative Size Comparison": [
+      "Pre-calculated 2D sizes cannot be used as physical conclusions. Objects of the same category (e.g., a herd of animals, mass-produced tables) usually share the same physical size; visual differences are due to perspective. Always mentally place them at the same depth when comparing.",
+      "Rotating a rectangular object 90 degrees swaps its visual length and width. Hidden postures (e.g., kneeling, sitting) cannot be used to directly infer true standing height.",
+      "A flexible object wrapped around the outside of another object (e.g., a chain around a gear) inherently has a larger effective physical radius than the enclosed object.",
+      "When evaluating if container A can hold object B, you must subtract the volume of any items already inside container A. Do not rely solely on exterior dimensions.",
+      "Interactions must respect structural mechanics. A tree cannot support the weight of a concrete building; a human body is too short to bridge a wide canal; a tall vertical structure (like a lighthouse) lacks the structural design to act as a horizontal bridge.",
+      "Biological structures have natural growth limits (e.g., inner flower parts will not grow endlessly beyond outer petals). Manufactured items like shoes scale in 3D; a larger size means increased width and volume, not just length.",
+      "Spherical transparent containers globally magnify the objects inside them. Cylindrical transparent containers only stretch objects horizontally.",
+      "Large printed graphics on a surface (e.g., a giant book printed on a tote bag) create a visual illusion of size but do not increase the object's actual physical volume or capacity.",
+      "Due to massive scale disparities, a small foreground object (like a potted plant) can only occlude a tiny fraction (like a single branch) of a massive background object (like a distant tree). It cannot cover half or most of it.",
+      "Using a shorter background set or backdrop reveals more of the actual room behind it, making the entire space appear more expanded and spacious."
+    ],
+  "Scale Consistency": [
+      "Capacity depends on 3D internal volume (depth, width, opening), not just 2D footprint or length. Without 3D data, differently shaped containers are non-measurable. Sugarcane yield depends on thickness, not just length.",
+      "Appropriateness requires matching functional capacity to the space. A single small AC or a small chandelier is insufficient for a large room/hall, regardless of whether it physically 'fits'.",
+      "When evaluating 'fit inside', consider all valid placements: internal shelves, top ledges, or vertical stacking (e.g., standardized laundry appliances are stackable).",
+      "A background or backdrop makes the foreground object appear BIGGER and more prominent through framing contrast, not smaller.",
+      "Objects appearing smaller in the distance (e.g., top stairs, distant fruits) is purely perspective shrinkage. Physically, they are the same size as the closer ones.",
+      "Mass-produced industrial items (e.g., thread spools, bowls, water dispensers) are physically identical in size. Apparent size differences in a single image are always due to perspective or angle.",
+      "Biological reality overrides naive visual impressions: a baby is small enough to ride a dog; a bird's neck can extend significantly; a tree's leaf canopy visually inflates its mass.",
+      "Seating capacity relies on table perimeter (approx. 60cm per person). Two long tables can easily seat 10+ people. Do not default to small fixed numbers without visual proof."
+    ]
+}
